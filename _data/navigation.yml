@@ -1,11 +1,5 @@
 header:
   - titles:
-      en      : Home
-      zh-Hans : 主页
-      zh-Hant : 主頁
-    url: /index.html
-
-  - titles:
       en      : Archive
       zh-Hans : 归档
       zh-Hant : 歸檔
