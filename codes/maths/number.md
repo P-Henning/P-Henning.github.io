@@ -1,6 +1,6 @@
 ---
-layout: article
 title: 数论
+permalink: /codes/maths/number
 sidebar:
   nav: codes
 ---
