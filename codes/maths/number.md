@@ -6,6 +6,7 @@ aside:
   toc: true
 sidebar:
   nav: codes
+show_edit_on_github: true
 ---
 
 ## 欧几里得算法
