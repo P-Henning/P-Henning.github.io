@@ -12,6 +12,12 @@ header:
     url: /codes/maths/number
 
   - titles:
+      en      : Challenge!
+      zh-Hans : 挑战！
+      zh-Hant : 挑戰！
+    url: /challenge/index.html
+
+  - titles:
       en      : Message
       zh-Hans : 留言
       zh-Hant : 留言
@@ -23,38 +29,38 @@ codes:
       - title:  数论
         url:    /codes/maths/number
       - title:  组合数学
-        url:    /codes/maths/combine.md
+        url:    /codes/maths/combine
       - title:  计算几何
-        url:    /codes/maths/geometry.md
+        url:    /codes/maths/geometry
       - title:  其它
-        url:    /codes/maths/others.md
+        url:    /codes/maths/others
   - title:      图论
     children:
       - title:  最短路
-        url:    /codes/graph/short-path.md
+        url:    /codes/graph/short-path
       - title:  最小生成树
-        url:    /codes/graph/mst.md
+        url:    /codes/graph/mst
       - title:  连通性
-        url:    /codes/graph/tarjan.md
+        url:    /codes/graph/tarjan
       - title:  二分图
-        url:    /codes/graph/bipartite.md
+        url:    /codes/graph/bipartite
       - title:  网络流
-        url:    /codes/graph/network.md
+        url:    /codes/graph/network
   - title:      数据结构
     children:
       - title:  线性结构
-        url:    /codes/data-struct/linear.md
+        url:    /codes/data-struct/linear
       - title:  线段树相关
-        url:    /codes/data-struct/segment.md
+        url:    /codes/data-struct/segment
       - title:  平衡树相关
-        url:    /codes/data-struct/balance.md
+        url:    /codes/data-struct/balance
       - title:  其它
-        url:    /codes/data-struct/others.md
+        url:    /codes/data-struct/others
   - title:      字符串
     children:
       - title:  基本算法
-        url:    /codes/string/basics.md
+        url:    /codes/string/basics
       - title:  自动机
-        url:    /codes/string/automaton.md
+        url:    /codes/string/automaton
       - title:  其它
-        url:    /codes/string/others.md
+        url:    /codes/string/others
