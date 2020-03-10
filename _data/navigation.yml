@@ -3,7 +3,7 @@ header:
       en      : Home
       zh-Hans : 主页
       zh-Hant : 主頁
-    url: /archive.html
+    url: /index.html
 
   - titles:
       en      : Archive
