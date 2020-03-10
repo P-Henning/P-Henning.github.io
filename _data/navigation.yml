@@ -15,7 +15,7 @@ header:
       en      : Challenge!
       zh-Hans : 挑战！
       zh-Hant : 挑戰！
-    url: /challenge/index.html
+    url: /challenge.html
 
   - titles:
       en      : Message
