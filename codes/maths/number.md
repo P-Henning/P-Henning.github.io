@@ -1,4 +1,5 @@
 ---
+layout: article
 title: 数论
 permalink: /codes/maths/number
 sidebar:
@@ -24,6 +25,8 @@ int ext_gcd(int a,int b,int &x,int &y){
   y-=a/b*x;return d;
 }
 ```
+
+---
 
 ## 中国剩余定理
 
@@ -68,6 +71,8 @@ int ext_crt(int *b,int *w,int n){
 }
 ```
 
+---
+
 ## 质数
 
 ```cpp
@@ -100,6 +105,8 @@ void initprime_euler(int n){
   }
 }
 ```
+
+---
 
 ## 欧拉函数
 
@@ -138,6 +145,8 @@ void initphi_euler(int *phi,int n){
   }
 }
 ```
+
+---
 
 ## 乘法逆元
 
