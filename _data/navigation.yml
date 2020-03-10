@@ -1,50 +1,66 @@
 header:
   - titles:
-      # @start locale config
-      en      : &EN       Archive
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  归档
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸檔
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      ko      : &KO       아카이브
-      ko-KR   : *KO
-      fr      : &FR       Archives
-      fr-BE   : *FR
-      fr-CA   : *FR
-      fr-CH   : *FR
-      fr-FR   : *FR
-      fr-LU   : *FR
-      # @end locale config
+      en      : Home
+      zh-Hans : 主页
+      zh-Hant : 主頁
     url: /archive.html
 
   - titles:
-      # @start locale config
-      en      : &EN       About
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      zh-Hans : &ZH_HANS  关于
-      zh      : *ZH_HANS
-      zh-CN   : *ZH_HANS
-      zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關於
-      zh-TW   : *ZH_HANT
-      zh-HK   : *ZH_HANT
-      ko      : &KO       소개
-      ko-KR   : *KO
-      fr      : &FR       À propos
-      fr-BE   : *FR
-      fr-CA   : *FR
-      fr-CH   : *FR
-      fr-FR   : *FR
-      fr-LU   : *FR
-      # @end locale config
-    url: /about.html
+      en      : Archive
+      zh-Hans : 归档
+      zh-Hant : 歸檔
+    url: /archive.html
+
+  - titles:
+      en      : Codes
+      zh-Hans : 码库
+      zh-Hant : 碼庫
+    url: /codes/maths/number.md
+
+  - titles:
+      en      : Message
+      zh-Hans : 留言
+      zh-Hant : 留言
+    url: /message.html
+
+codes:
+  - title:      数学
+    children:
+      - title:  数论
+        url:    /codes/maths/number.md
+      - title:  组合数学
+        url:    /codes/maths/combine.md
+      - title:  计算几何
+        url:    /codes/maths/geometry.md
+      - title:  其它
+        url:    /codes/maths/others.md
+  - title:      图论
+    children:
+      - title:  最短路
+        url:    /codes/graph/short-path.md
+      - title:  最小生成树
+        url:    /codes/graph/mst.md
+      - title:  连通性
+        url:    /codes/graph/tarjan.md
+      - title:  二分图
+        url:    /codes/graph/bipartite.md
+      - title:  网络流
+        url:    /codes/graph/network.md
+  - title:      数据结构
+    children:
+      - title:  线性结构
+        url:    /codes/data-struct/linear.md
+      - title:  线段树相关
+        url:    /codes/data-struct/segment.md
+      - title:  平衡树相关
+        url:    /codes/data-struct/balance.md
+      - title:  其它
+        url:    /codes/data-struct/others.md
+  - title:      字符串
+    children:
+      - title:  基本算法
+        url:    /codes/string/basics.md
+      - title:  自动机
+        url:    /codes/string/automaton.md
+      - title:  其它
+        url:    /codes/string/others.md
