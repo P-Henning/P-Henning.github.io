@@ -190,6 +190,8 @@ exclude:
   - gulpfile.js
   - jekyll-text-theme.gemspec
   - package.json
+  - /_challenge_articles
+  - /_posts
 
 collections:
   challenge_articles:
