@@ -1,4 +1,5 @@
 ---
+layout: article
 title: 数论
 sidebar:
   nav: codes
