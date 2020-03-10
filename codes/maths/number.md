@@ -2,6 +2,8 @@
 layout: article
 title: 数论
 permalink: /codes/maths/number
+aside:
+  toc: true
 sidebar:
   nav: codes
 ---
