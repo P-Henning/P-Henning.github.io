@@ -191,6 +191,11 @@ exclude:
   - jekyll-text-theme.gemspec
   - package.json
 
+collections_dir: collections
+collections:
+  challenge_articles:
+    output: true
+
 defaults:
   - scope:
       path: ""
