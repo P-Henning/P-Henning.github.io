@@ -9,7 +9,7 @@ header:
       en      : Codes
       zh-Hans : 码库
       zh-Hant : 碼庫
-    url: /codes/maths/number.md
+    url: /codes/maths/number
 
   - titles:
       en      : Message
@@ -21,7 +21,7 @@ codes:
   - title:      数学
     children:
       - title:  数论
-        url:    /codes/maths/number.md
+        url:    /codes/maths/number
       - title:  组合数学
         url:    /codes/maths/combine.md
       - title:  计算几何
