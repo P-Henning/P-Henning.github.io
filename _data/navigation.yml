@@ -15,7 +15,13 @@ header:
       en      : Challenge!
       zh-Hans : 挑战！
       zh-Hant : 挑戰！
-    url: /challenge.html
+    url: /challenge/challenge-1
+
+  - titles:
+      en      : IDE
+      zh-Hans : IDE
+      zh-Hant : IDE
+    url: /ide.html
 
   - titles:
       en      : Message
@@ -64,3 +70,17 @@ codes:
         url:    /codes/string/automaton
       - title:  其它
         url:    /codes/string/others
+
+challenge:
+  - title:      挑战一：The Prologue
+    children:
+      - title:  文章
+        url:    /challenge/challenge-1
+      - title:  代码
+        url:    /codes/challenge/challenge-1
+  - title:      挑战二：Circles
+    children:
+      - title:  文章
+        url:    /challenge/challenge-2
+      - title:  代码
+        url:    /codes/challenge/challenge-2
