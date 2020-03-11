@@ -1,6 +1,6 @@
 ---
 layout: article
-title: ÌôÕ½Ò»£ºThe Prologue
+title: æŒ‘æˆ˜ä¸€ï¼šThe Prologue
 permalink: /codes/challenge/challenge-1
 aside:
   toc: true
@@ -9,7 +9,7 @@ sidebar:
 show_edit_on_github: true
 ---
 
-### Ğ¡Êı»¯·ÖÊı
+### å°æ•°åŒ–åˆ†æ•°
 
 ```cpp
 #include<cstdio>
