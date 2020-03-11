@@ -21,7 +21,7 @@ header:
       en      : IDE
       zh-Hans : IDE
       zh-Hant : IDE
-    url: /ide.html
+    url: https://www.jdoodle.com/online-compiler-c++/
 
   - titles:
       en      : Message
@@ -76,11 +76,7 @@ challenge:
     children:
       - title:  挑战一：The Prologue（文章）
         url:    /challenge/challenge-1
-      - title:  挑战一：The Prologue（代码）
-        url:    /codes/challenge/challenge-1
   - title:      挑战二：Circles
     children:
       - title:  挑战二：Circles（文章）
         url:    /challenge/challenge-2
-      - title:  挑战二：Circles（代码）
-        url:    /codes/challenge/challenge-2
