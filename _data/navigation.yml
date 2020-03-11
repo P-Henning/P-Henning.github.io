@@ -74,13 +74,13 @@ codes:
 challenge:
   - title:      挑战一：The Prologue
     children:
-      - title:  文章
+      - title:  挑战一：The Prologue（文章）
         url:    /challenge/challenge-1
-      - title:  代码
+      - title:  挑战一：The Prologue（代码）
         url:    /codes/challenge/challenge-1
   - title:      挑战二：Circles
     children:
-      - title:  文章
+      - title:  挑战二：Circles（文章）
         url:    /challenge/challenge-2
-      - title:  代码
+      - title:  挑战二：Circles（代码）
         url:    /codes/challenge/challenge-2
