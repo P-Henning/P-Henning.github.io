@@ -39,7 +39,7 @@ author:
   url       : https://P-Henning.github.io
   avatar    : /assets/images/avatar/p-henning.png # path or url of avatar image (square)
   bio       : Away from OI...
-  email     : mailto:phenning@foxmail.com
+  email     : phenning@foxmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
   weibo     : # "user_id"   the last part of your profile url, e.g. https://www.weibo.com/user_id/profile?...
@@ -202,7 +202,6 @@ defaults:
       aside:
         toc: true
       show_edit_on_github: true
-      show_author_profile: true
       show_subscribe: true
       pageview: true
 
