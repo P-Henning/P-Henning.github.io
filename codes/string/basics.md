@@ -1,6 +1,6 @@
 ---
 layout: article
-title: »ù±¾Ëã·¨
+title: åŸºæœ¬ç®—æ³•
 permalink: /codes/string/basics
 aside:
   toc: true
@@ -9,7 +9,7 @@ sidebar:
 show_edit_on_github: true
 ---
 
-## ×îĞ¡±íÊ¾·¨
+## æœ€å°è¡¨ç¤ºæ³•
 
 ```cpp
 int minr(char *s){
@@ -27,7 +27,7 @@ int minr(char *s){
 
 ---
 
-## ManacherËã·¨
+## Manacherç®—æ³•
 
 ```cpp
 void initstr(char *s){
@@ -50,9 +50,9 @@ int manacher(char *s,int *r){
 
 ---
 
-## KMPËã·¨
+## KMPç®—æ³•
 
-### KMPËã·¨
+### KMPç®—æ³•
 
 ```cpp
 const int maxn=1e5+5;
@@ -76,7 +76,7 @@ int find(char *s,int *pos){
 }
 ```
 
-### À©Õ¹KMPËã·¨
+### æ‰©å±•KMPç®—æ³•
 
 ```cpp
 const int maxn=1e5+5;
@@ -104,9 +104,9 @@ void findext(char *s){
 
 ---
 
-## ×Ö·û´®¹şÏ£
+## å­—ç¬¦ä¸²å“ˆå¸Œ
 
-### BKDR¹şÏ£
+### BKDRå“ˆå¸Œ
 
 ```cpp
 typedef unsigned int _int;
@@ -118,7 +118,7 @@ _int bkdr_hash(char *s){
 }
 ```
 
-### Çø¼ä¹şÏ£
+### åŒºé—´å“ˆå¸Œ
 
 ```cpp
 typedef unsigned int _int;
@@ -137,7 +137,7 @@ _int query(int l,int r){
 
 ---
 
-## ¿µÍĞÕ¹¿ª
+## åº·æ‰˜å±•å¼€
 
 ```cpp
 const int maxn=10+5;
