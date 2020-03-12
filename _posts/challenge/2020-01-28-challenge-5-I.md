@@ -30,9 +30,7 @@ sidebar:
 
 打出连续的perfect和great称为Combo，而往往单个note得分也有Combo数的加成，还与主乐队综合能力与曲目难度有关，具体值如下：
 
-![](https://i0.hdslb.com/bfs/article/watermark/e0a7f866ac582b33de0ff2bf88433358ecba8a4b.png@1320w_810h.webp)
-
-引自b站专栏，原作者@BuG_Dream
+![](https://s1.ax1x.com/2020/03/13/8mLMwQ.jpg "引自b站专栏，原作者@BuG_Dream")
 
 可以看出，基础分数是与曲目有关的常数，而总得分是所有note数之和，即有
 
