@@ -76,21 +76,21 @@ codes:
 challenge:
   - title:      挑战一
     children:
-      - title:  The Prologue（文章）
+      - title:  The Prologue
         url:    /challenge/challenge-1
   - title:      挑战二
     children:
-      - title:  Circles（文章）
+      - title:  Circles
         url:    /challenge/challenge-2
   - title:      挑战三
     children:
-      - title:  Picture Puzzle of Chino（文章I）
+      - title:  Picture Puzzle of Chino (I)
         url:    /challenge/challenge-3-I
-      - title:  Picture Puzzle of Chino（文章II）
+      - title:  Picture Puzzle of Chino (II)
         url:    /challenge/challenge-3-II
   - title:      挑战五
     children:
-      - title:  How to Get Highest Score in Garupa？（文章I）
+      - title:  How to Get Highest Score in Garupa? (I)
         url:    /challenge/challenge-5-I
-      - title:  How to Get Highest Score in Garupa？（文章II）
+      - title:  How to Get Highest Score in Garupa? (II)
         url:    /challenge/challenge-5-II
