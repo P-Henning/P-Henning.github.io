@@ -26,11 +26,13 @@ sidebar:
 
 众所周知，音游的得分是由你打的好坏决定的（废话）。
 
-包括邦邦在内的大多数音游的判定机制都是按照击打note的误差时间来评价，分为以下五个等级：<kbd>perfect</kbd> <kbd>great</kbd> <kbd>good</kbd> <kbd>bad</kbd> <kbd>miss</kbd>。
+包括邦邦在内的大多数音游的判定机制都是按照击打note的误差时间来评价，分为以下五个等级：perfect、great、good、bad、miss。
 
-打出连续的<kbd>perfect</kbd>和<kbd>great</kbd>称为Combo，而往往单个note得分也有Combo数的加成，还与主乐队综合能力与曲目难度有关，具体值如下：
+打出连续的perfect和great称为Combo，而往往单个note得分也有Combo数的加成，还与主乐队综合能力与曲目难度有关，具体值如下：
 
-![](https://i0.hdslb.com/bfs/article/watermark/e0a7f866ac582b33de0ff2bf88433358ecba8a4b.png@1320w_810h.webp "引自b站专栏，原作者@BuG_Dream")
+![](https://i0.hdslb.com/bfs/article/watermark/e0a7f866ac582b33de0ff2bf88433358ecba8a4b.png@1320w_810h.webp)
+
+引自b站专栏，原作者@BuG_Dream
 
 可以看出，基础分数是与曲目有关的常数，而总得分是所有note数之和，即有
 
@@ -46,7 +48,7 @@ $$S_k=\sum_{i=1}^kM_i$$
 
 然而对邦前一天，香澄突然怂了，担心比不过R组~~她们会说相声~~和~~夕阳红~~AG。于是她恳求市谷有咲帮她计算一下最高得分。
 
-假设popipa基础得分为$a$，准度为$p$，一首曲子note总数为$k$，<kbd>miss</kbd>数为$x$，其中$p=\frac{N(perfect)}k$，$N(perfect)$为<kbd>perfect</kbd>数。请你帮有咲计算一下，popipa的极限高分和翻车低分分别是多少。
+假设popipa基础得分为$a$，准度为$p$，一首曲子note总数为$k$，miss数为$x$，其中$p=\frac{N(perfect)}k$，$N(perfect)$为perfect数。请你帮有咲计算一下，popipa的极限高分和翻车低分分别是多少。
 
 以~~黑叫~~Black Shout为例[^sample]，
 
