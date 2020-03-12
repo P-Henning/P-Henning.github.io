@@ -66,17 +66,31 @@ codes:
     children:
       - title:  基本算法
         url:    /codes/string/basics
+      - title:  Trie树相关
+        url:    /codes/string/trie
       - title:  自动机
         url:    /codes/string/automaton
       - title:  其它
         url:    /codes/string/others
 
 challenge:
-  - title:      挑战一：The Prologue
+  - title:      挑战一
     children:
-      - title:  挑战一：The Prologue（文章）
+      - title:  The Prologue（文章）
         url:    /challenge/challenge-1
-  - title:      挑战二：Circles
+  - title:      挑战二
     children:
-      - title:  挑战二：Circles（文章）
+      - title:  Circles（文章）
         url:    /challenge/challenge-2
+  - title:      挑战三
+    children:
+      - title:  Picture Puzzle of Chino（文章I）
+        url:    /challenge/challenge-3-I
+      - title:  Picture Puzzle of Chino（文章II）
+        url:    /challenge/challenge-3-II
+  - title:      挑战五
+    children:
+      - title:  How to Get Highest Score in Garupa？（文章I）
+        url:    /challenge/challenge-5-I
+      - title:  How to Get Highest Score in Garupa？（文章II）
+        url:    /challenge/challenge-5-II
