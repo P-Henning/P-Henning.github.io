@@ -29,7 +29,7 @@ yuzan1830给出的数据范围：$1000\leqslant a\leqslant 3000$，$0.8\leqslant
 
 为了方便，记连击$t$次的combo倍率为$combo[t]$，perfect数为$np=k\cdot p$，great数为$ng=k-np-x$。同时，在讨论过程中不考虑基础分数$a$，因为对分数高低没有影响。（所以下文的$a$不一定指基础分数）
 
-**法1：** 设状态$f[n][a][b][c][t]$表示前$n$个note中有$a$次perfect、$b$次great、$c$次miss，且目前连击$t$次，此时的理论最高分。最终答案为$\max\limits_i\{f[k][np][ng][x][i]\}$。
+**法1：** 设状态$f[n][a][b][c][t]$表示前$n$个note中有$a$次perfect、$b$次great、$c$次miss，且目前连击$t$次，此时的理论最高分。最终答案为$\max\limits_i\lbrace f[k][np][ng][x][i]\rbrace$。
 
 讨论第$n$个note分别是perfect、great、miss的三种情况，得到状态转移方程：
 
@@ -54,11 +54,11 @@ d_2[t]&=0.8\cdot combo[t]
 
 **法2：** 所有的note可以看成是若干段连击被若干个miss分隔开。注意到miss是不得分的，因此总得分就是若干段连击的得分之和。
 
-设状态$f[m][a][b]$表示总共有$a$次perfect、$b$次great的$m$段连击的理论最高分。最终答案为$\max\limits_{i=1}^{x+1}\{f[i][np][ng]\}$。
+设状态$f[m][a][b]$表示总共有$a$次perfect、$b$次great的$m$段连击的理论最高分。最终答案为$\max\limits_{i=1}^{x+1}\lbrace f[i][np][ng]\rbrace$。
 
 状态转移方程：
 
-$$f[m][a][b]=\max\{f[m-1][a-t_1][b-t_2]+d[t_1][t_2]\}$$
+$$f[m][a][b]=\max\lbrace f[m-1][a-t_1][b-t_2]+d[t_1][t_2]\rbrace$$
 
 其中$d[t_1][t_2]$表示一段包含$t_1$个perfect、$t_2$个great的连击的最高得分。由于combo倍率递增，根据排序不等式，perfect应该在great之后。于是$d[t_1][t_2]$可以递推求出：
 
@@ -67,7 +67,7 @@ d[0][t_2-1]+d_2[t_2]&t_1=0\\
 d[t_1-1][t_2]+d_1[t_1+t_2]&t_1\neq 0
 \end{cases}$$
 
-状态数为$O(k^2x)$，即空间复杂度。每次转移需要枚举$t_1,t_2$，复杂度$O(k^2)$。注意到$f[m-1][a-t_1][b-t_2]+d[t_1][t_2]$的值关于$t_1,t_2$都是单峰的，因此可以三分$t_1,t_2$求出最值，每次转移就变成了$O(\log_3^2k)$，总时间复杂度为$O(k^2x\log_3^2k)$。比法1优秀，但常数大。
+状态数为$O(k^2x)$，即空间复杂度。每次转移需要枚举$t_1,t_2$，复杂度$O(k^2)$。注意到$f[m-1][a-t_1][b-t_2]+d[t_1][t_2]$的值关于$t_1,t_2$都是单峰的，因此可以三分$t_1,t_2$求出最值，每次转移就变成了$O(\log^2k)$，总时间复杂度为$O(k^2x\log^2k)$。比法1优秀，但常数大。
 
 > 达羌：我才不会告诉你这个“注意到”花了我多少时间。
 
