@@ -90,7 +90,7 @@ challenge:
         url:    /challenge/challenge-3-II
   - title:      挑战五
     children:
-      - title:  How to Get Highest Score in Garupa? (I)
+      - title:  How to Get Highest Score in Garupa (I)
         url:    /challenge/challenge-5-I
-      - title:  How to Get Highest Score in Garupa? (II)
+      - title:  How to Get Highest Score in Garupa (II)
         url:    /challenge/challenge-5-II
