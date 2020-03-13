@@ -38,8 +38,8 @@ codes:
         url:    /codes/maths/combine
       - title:  计算几何
         url:    /codes/maths/geometry
-      - title:  其它
-        url:    /codes/maths/others
+      - title:  线性代数
+        url:    /codes/maths/linear
   - title:      图论
     children:
       - title:  最短路
