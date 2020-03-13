@@ -9,7 +9,9 @@ sidebar:
 show_edit_on_github: true
 ---
 
-## 组合数
+## 排列组合
+
+### 组合数
 
 ```cpp
 int C(int a,int b){
@@ -38,8 +40,41 @@ void initC_n(int n){
 }
 ```
 
-### Lucas定理
+### 斯特林数
 
+```cpp
+const int maxn=1000+5;
+
+int s2[maxn][maxn],s1[maxn][maxn];
+void inits2(int n){
+  s2[0][0]=1;
+  for(int i=1;i<=n;i++)
+    for(int j=1;j<=i;j++)
+      s2[i][j]=s2[i-1][j-1]+j*s2[i-1][j];
+}
+void inits1(int n){
+  s1[0][0]=1;
+  for(int i=1;i<=n;i++)
+    for(int j=1;j<=i;j++)
+      s1[i][j]=s1[i-1][j-1]+(i-1)*s1[i-1][j];
+}
+```
+
+### 卡特兰数
+
+```cpp
+const int maxn=1e5+5;
+
+int Cn[maxn];
+void initCn(int n){
+  Cn[1]=1;
+  for(int i=2;i<=n;i++)Cn[i]=Cn[i-1]*(4*i-2)/(i+1);
+}
+```
+
+---
+
+## Lucas定理
 
 ```cpp
 int powmod(int a,int b,int c){
@@ -62,36 +97,28 @@ int lucas(int n,int m,int p){
 
 ---
 
-## 斯特林数
+## 康托展开
 
 ```cpp
-const int maxn=1000+5;
+const int maxn=10+5;
 
-int s2[maxn][maxn],s1[maxn][maxn];
-void inits2(int n){
-  s2[0][0]=1;
-  for(int i=1;i<=n;i++)
-    for(int j=1;j<=i;j++)
-      s2[i][j]=s2[i-1][j-1]+j*s2[i-1][j];
+int a[maxn],fact[maxn];
+bool vis[maxn];
+int cantor(int n){
+  int cnt=(a[1]-1)*fact[n-1];
+  for(int i=2;i<=n;i++){
+    int tmp=0;
+    for(int j=1;j<i;j++)tmp+=a[j]<a[i];
+    cnt+=(a[i]-tmp-1)*fact[n-i];
+  }
+  return cnt+1;
 }
-void inits1(int n){
-  s1[0][0]=1;
-  for(int i=1;i<=n;i++)
-    for(int j=1;j<=i;j++)
-      s1[i][j]=s1[i-1][j-1]+(i-1)*s1[i-1][j];
-}
-```
-
----
-
-## 卡特兰数
-
-```cpp
-const int maxn=1e5+5;
-
-int Cn[maxn];
-void initCn(int n){
-  Cn[1]=1;
-  for(int i=2;i<=n;i++)Cn[i]=Cn[i-1]*(4*i-2)/(i+1);
+void decantor(int n,int k){
+  memset(vis,0,sizeof(vis));k--;
+  for(int i=1;i<=n;i++){
+    int j,t=k/fact[n-i];
+    for(j=1;j<=n;j++)if(!vis[j]&&!t--)break;
+    a[i]=j,vis[j]=1,k%=fact[n-i];
+  }
 }
 ```
