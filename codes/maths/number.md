@@ -151,6 +151,55 @@ void initphi_euler(int *phi,int n){
 
 ---
 
+## 快速幂与快速乘
+
+### Montgomery算法
+
+```cpp
+int powmod(int a,int b,int c){
+  int ans=1;
+  for(a%=c;b;b>>=1,a=a*a%c)if(b&1)ans=ans*a%c;
+  return ans;
+}
+int mulmod(int a,int b,int c){
+  int ans=0;
+  for(a%=c;b;b>>=1,a=(a<<1)%c)if(b&1)ans=(ans+a)%c;
+  return ans;
+}
+```
+
+### $O(1)$快速乘
+
+```cpp
+typedef long long LL;
+
+LL mulmod(LL a,LL b,LL c){
+  return (a*b-(LL)((long double)a/c*b)*c+c)%c;
+}
+```
+
+### 光速幂
+
+```cpp
+const int maxn=1e5+5;
+
+template<typename Tp>
+class lightspeed_pow{
+public:
+  Tp pw[maxn],pw2[maxn],mod;int s;
+  void initpow(Tp a,Tp b,Tp c){
+    pw[0]=pw2[0]=1,s=sqrt(b)+1,mod=c;
+    for(int i=1;i<=s;i++)pw[i]=pw[i-1]*a%c;
+    for(int i=1;i<=s;i++)pw2[i]=pw2[i-1]*pw[s]%c;
+  }
+  Tp pow(Tp b){
+    return b<=s?pw[b]:pw2[b/s]*pw[b-b/s*s]%mod;
+  }
+};
+```
+
+---
+
 ## 乘法逆元
 
 ### 费马小定理
