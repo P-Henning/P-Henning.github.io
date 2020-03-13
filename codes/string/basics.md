@@ -134,31 +134,3 @@ _int query(int l,int r){
   return ha[r]-ha[l-1]*pw[r-l+1];
 }
 ```
-
----
-
-## 康托展开
-
-```cpp
-const int maxn=10+5;
-
-int a[maxn],fact[maxn];
-bool vis[maxn];
-int cantor(int n){
-  int cnt=(a[1]-1)*fact[n-1];
-  for(int i=2;i<=n;i++){
-    int tmp=0;
-    for(int j=1;j<i;j++)tmp+=a[j]<a[i];
-    cnt+=(a[i]-tmp-1)*fact[n-i];
-  }
-  return cnt+1;
-}
-void decantor(int n,int k){
-  memset(vis,0,sizeof(vis));k--;
-  for(int i=1;i<=n;i++){
-    int j,t=k/fact[n-i];
-    for(j=1;j<=n;j++)if(!vis[j]&&!t--)break;
-    a[i]=j,vis[j]=1,k%=fact[n-i];
-  }
-}
-```
