@@ -24,13 +24,13 @@ short y=-25;
 
     1111 1111 1110 0111
 
+<!--more-->
+
 有符号类型使用补码表示法存储整数，正数和$0$用原码，负数用补码。
 
 有符号类型的最左边的二进制位是符号位。
 
 $n$位有符号类型的表示范围是$[-2^{n-1},2^{n-1}-1]$，可以看作是模$2^n$意义下的数。
-
-<!--more-->
 
 ## 位运算
 
@@ -169,7 +169,7 @@ for(int i=s;i;i-=i&-i)int x=i&-i;
 
   $$\begin{aligned}
   2^ix&=x\ll i\\
-  \lfloor\frac x{2^i}\rfloor&=x\gg i\\
+  \left\lfloor\frac x{2^i}\right\rfloor&=x\gg i\\
   x\mod 2^i&=x\land((1\ll i)-1)
   \end{aligned}$$
   
