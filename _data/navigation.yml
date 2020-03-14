@@ -9,7 +9,7 @@ header:
       en      : Codes
       zh-Hans : 码库
       zh-Hant : 碼庫
-    url: /codes/maths/number
+    url: /codes/math/number
 
   - titles:
       en      : Challenge!
@@ -33,13 +33,13 @@ codes:
   - title:      数学
     children:
       - title:  数论
-        url:    /codes/maths/number
+        url:    /codes/math/number
       - title:  组合数学
-        url:    /codes/maths/combine
+        url:    /codes/math/combine
       - title:  计算几何
-        url:    /codes/maths/geometry
+        url:    /codes/math/geometry
       - title:  线性代数
-        url:    /codes/maths/linear
+        url:    /codes/math/linear
   - title:      图论
     children:
       - title:  最短路
@@ -66,8 +66,6 @@ codes:
     children:
       - title:  基本算法
         url:    /codes/string/basics
-      - title:  Trie树相关
-        url:    /codes/string/trie
       - title:  自动机
         url:    /codes/string/automaton
       - title:  其它
