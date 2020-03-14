@@ -1,0 +1,187 @@
+---
+title: 文件输入输出与对拍
+author: P-Henning
+permalink: /fio-and-fc
+key: fio-and-fc
+---
+
+## 文件输入输出
+
+### 重定向
+
+`freopen`用来重新分配文件指针，实现重定向。此函数一般用于将一个指定的文件打开一个预定义的流（标准输入`stdin`、标准输出`stdout`或者标准出错`stderr`）。如果打开成功则返回该指向该流的指针，否则为`NULL`。 
+
+```c++
+FILE *__cdecl freopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode,FILE * __restrict__ _File);
+```
+
+<!--more-->
+
+示例：
+
+```cpp
+freopen("a.in","r",stdin);
+freopen("a.out","w",stdout);
+int a,b;
+scanf("%d%d",&a,&b);
+printf("%d\n",a+b);
+```
+
+### `fopen`与`fclose`
+
+`fopen`用来打开一个特定的文件，并把一个流和这个文件相关联。如果打开成功则返回该指向该流的指针，否则为`NULL`。 
+
+```cpp
+FILE *__cdecl fopen(const char * __restrict__ _Filename,const char * __restrict__ _Mode);
+```
+
+`fclose`用来关闭一个流。对于输出流，该函数会在文件关闭前刷新缓冲区。如果关闭成功则返回$0$。
+
+```cpp
+int __cdecl fclose(FILE *_File);
+```
+
+示例：
+
+```cpp
+FILE *fin=fopen("a.in","r");
+FILE *fout=fopen("a.out","w");
+int a,b;
+fscanf(fin,"%d%d",&a,&b);
+fprintf(fout,"%d\n",a+b);
+fclose(fin);
+fclose(fout);
+```
+
+### `fstream`
+
+`fstream`类中的成员函数`open`用来打开文件，从而将数据流和文件进行关联。同时，`fstream`类有与`open`相同的构造函数。
+
+```cpp
+void
+open(const char* __s,
+ios_base::openmode __mode = ios_base::in | ios_base::out);
+void
+open(const std::string& __s,
+ios_base::openmode __mode = ios_base::in | ios_base::out)
+```
+
+成员函数`close`用来将缓存中的数据排放出来并关闭当前文件。调用该函数后，原先的流对象就可以打开其它的文件，原来打开的文件也可以被其它进程访问。
+
+```cpp
+void
+close()；
+```
+
+`fstream`有两个子类：`ifstream`和`ofstream`，两者分别默认以输入方式和输出方式打开文件。
+
+示例：
+
+```cpp
+ifstream fin("a.in");
+ofstream fout("a.out");
+int a,b;
+fin>>a>>b;
+fout<<a+b<<"\n";
+fin.close();
+fout.close();
+```
+
+## 数据生成器
+
+### 随机数生成
+
+`rand`函数可以生成区间$[0,\text{RAND\_MAX}]$之间的一个随机数。其中$\text{RAND\_MAX}$至少为$2^{15}-1=32767$。
+
+```cpp
+int __cdecl rand(void);
+```
+
+`rand`函数是按指定的顺序来产生整数，并不是真正意义上的随机。为了使程序在每次执行时都能生成一个新序列的随机值，通常在`main`函数入口处调用一次`srand`函数设置随机数种子，通常采用`time(NULL)`。
+
+```cpp
+void __cdecl srand(unsigned int _Seed);
+```
+
+产生区间$[L,R]$范围内的随机数：
+
+```cpp
+#define RAND_INT (rand()*RAND_MAX+rand())
+#define RAND(L,R) (RAND_INT%((R)-(L)+1)+(L))
+```
+
+### 树的生成
+
+```cpp
+const int maxn=1e5+5;
+#define RAND_INT (rand()*RAND_MAX+rand())
+#define RAND(L,R) (RAND_INT%((R)-(L)+1)+(L))
+
+typedef pair<int,int> edge;
+edge edges[maxn];
+void rand_tree(int n){
+  for(int i=2;i<=n;i++)
+    edges[i-1]=edge(i,RAND(1,i-1));
+  random_shuffle(edges+1,edges+n);
+}
+```
+
+### 图的生成
+
+```cpp
+const int maxe=2e5+5;
+#define RAND_INT (rand()*RAND_MAX+rand())
+#define RAND(L,R) (RAND_INT%((R)-(L)+1)+(L))
+
+typedef pair<int,int> edge;
+edge edges[maxe];
+map<edge,bool> vis;
+void rand_graph(int n,int m){
+  for(int i=2;i<=n;i++){
+    edges[i-1]=edge(i,RAND(1,i-1));
+    vis[edges[i-1]]=1;
+  }
+  for(int i=n;i<=m;i++){
+    int a,b;
+    do{
+      a=RAND(1,n),b=RAND(1,n);
+      if(a<b)swap(a,b);
+    }while(a==b||vis.count(edge(a,b)));
+    edges[i]=edge(a,b),vis[edges[i]]=1;
+  }
+  random_shuffle(edges+1,edges+1+m);
+}
+```
+
+## 对拍文件
+
+### windows对拍
+
+新建一个记事本，敲入下面代码，然后保存成`.bat`格式的文件。
+
+```
+@echo off
+:loop
+data.exe
+std.exe
+test.exe
+fc test.out test.ans
+if not errorlevel 1 goto loop
+pause
+:end
+```
+
+也可以在`cpp`文件中调用`system`函数对拍：
+
+```cpp
+int main(){
+  for(int kase=1;;kase++){
+    Sleep(50);
+    system("data.exe");
+    system("std.exe");
+    system("test.exe");
+    printf("-----------Test Case %d----------\n",kase);
+    if(system("fc test.out test.ans"))system("pause");
+  }
+}
+```
