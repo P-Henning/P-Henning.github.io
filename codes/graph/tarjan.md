@@ -25,7 +25,7 @@ public:
   int n,edgtot,scctot,dfntot;
   edge edges[maxe],*now[maxn];
   int bel[maxn],dfn[maxn],low[maxn];
-  int st[maxn],stktop;bool inst[maxn];
+  int st[maxn],top;bool inst[maxn];
   void init(int n){
     this->n=n,edgtot=0;
     memset(now,0,sizeof(now));
@@ -35,8 +35,7 @@ public:
   }
 private:
   void dfs(int u){
-    dfn[u]=low[u]=++dfntot;
-    st[++stktop]=u,inst[u]=1;
+    dfn[u]=low[u]=++dfntot,st[++top]=u,inst[u]=1;
     for(edge *e=now[u];e;e=e->next){
       int v=e->to;
       if(!dfn[v]){dfs(v);low[u]=min(low[u],low[v]);}
@@ -44,12 +43,12 @@ private:
     }
     if(dfn[u]==low[u]){
       int v;scctot++;
-      do v=st[stktop--],bel[v]=scctot,inst[v]=0;while(u!=v);
+      do v=st[top--],bel[v]=scctot,inst[v]=0;while(u!=v);
     }
   }
 public:
   void tarjan(){
-    stktop=scctot=dfntot=0;
+    top=scctot=dfntot=0;
     for(int i=1;i<=n;i++)dfn[i]=0,inst[i]=0;
     for(int i=1;i<=n;i++)if(!dfn[i])dfs(i);
   }
@@ -79,8 +78,7 @@ public:
   }
 private:
   void dfs(int u,int cfa){
-    dfn[u]=low[u]=++dfntot;
-    int cnt=0;
+    int cnt=0;dfn[u]=low[u]=++dfntot;
     for(edge *e=now[u];e;e=e->next){
       int v=e->to;
       if(!dfn[v]){
@@ -117,7 +115,7 @@ public:
   edge edges[maxe],*now[maxn];
   int bel[maxn],dfn[maxn],low[maxn];
   bool iscutp[maxn];
-  edge *st[maxe];int stktop;
+  edge *st[maxe];int top;
   void init(int n){
     this->n=n,edgtot=0;
     memset(now,0,sizeof(now));
@@ -127,8 +125,7 @@ public:
   }
 private:
   void dfs(int u,int cfa){
-    dfn[u]=low[u]=++dfntot;
-    int cnt=0;
+    int cnt=0;dfn[u]=low[u]=++dfntot;
     for(edge *e=now[u];e;e=e->next){
       int v=e->to;
       if(!dfn[v]){
@@ -138,20 +135,20 @@ private:
           int p,q;iscutp[u]=1;
           bcc[++bcctot].clear();
           do{
-            edge *k=st[stktop--];p=k->from,q=k->to;
+            edge *k=st[top--];p=k->from,q=k->to;
             if(bel[p]!=bcctot){bcc[bcctot].push_back(p);bel[p]=bcctot;}
             if(bel[q]!=bcctot){bcc[bcctot].push_back(q);bel[q]=bcctot;}
           }while(p!=u||q!=v);
         }
       }
       else if(v!=cfa&&dfn[v]<dfn[u])
-        st[++stktop]=e,low[u]=min(low[u],dfn[v]);
+        st[++top]=e,low[u]=min(low[u],dfn[v]);
     }
     if(!cfa&&cnt<=1)iscutp[u]=0;
   }
 public:
   void tarjan(){
-    stktop=bcctot=dfntot=0;
+    top=bcctot=dfntot=0;
     for(int i=1;i<=n;i++)dfn[i]=bel[i]=0,iscutp[i]=0;
     for(int i=1;i<=n;i++)if(!dfn[i])dfs(i,0);
   }
