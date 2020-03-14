@@ -52,18 +52,18 @@ typedef vect point;
 ```cpp
 const int maxn=1e5+5;
 
-point st[maxn];int stktop;
+point st[maxn];int top;
 double cross(point a,point b,point c){return (b-a)*(c-a);}
 void graham(point *a,int n){
-  sort(a+1,a+1+n);stktop=0;
+  sort(a+1,a+1+n);top=0;
   for(int i=1;i<=n;i++){
-    while(stktop>1&&cross(st[stktop-1],st[stktop],a[i])<=0)stktop--;
-    st[++stktop]=a[i];
+    while(top>1&&cross(st[top-1],st[top],a[i])<=0)top--;
+    st[++top]=a[i];
   }
-  int tmp=stktop;
+  int tmp=top;
   for(int i=n-1;i>=1;i--){
-    while(stktop>tmp&&cross(st[stktop-1],st[stktop],a[i])<=0)stktop--;
-    st[++stktop]=a[i];
+    while(top>tmp&&cross(st[top-1],st[top],a[i])<=0)top--;
+    st[++top]=a[i];
   }
 }
 ```
