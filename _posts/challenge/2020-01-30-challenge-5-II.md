@@ -13,13 +13,13 @@ sidebar:
 
 据yuzan1830描述，这款音游中每个note的得分靠按键准度，分为perfect、great、good、bad、miss。该音游的得分机制见原题目。在只考虑perfect、great、miss，并且技能倍率为$1$、基础分数为常数的情况下，设基础分数为$a$，玩家准度（perfect数占note总数的比）为$p$，note总数为$k$，miss数为$x$，求理论最高分和最低分，并各输出一种方案。
 
+<!--more-->
+
 yuzan1830给出的数据范围：$1000\leqslant a\leqslant 3000$，$0.8\leqslant p\leqslant 1.0$，$600\leqslant k\leqslant 1200$，$0\leqslant x\leqslant 10$。
 
 不得不吐槽，yuzan1830给出的数据范围居然是有下限的。
 
 考虑到本蒟蒻的水平，实际数据规模可能会比给定的范围低。
-
-<!--more-->
 
 ### 接受挑战
 
