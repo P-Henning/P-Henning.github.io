@@ -40,7 +40,7 @@ $$r\lambda^2-p\lambda=q-\lambda s\Rightarrow r\lambda^2+(s-p)\lambda-q=0$$
 
 观察发现，得到的这个一元二次方程等价于$x=f(x)$。只要数列中出现了某一项等于$\lambda$，之后的每一项都会等于前一项，即等于$\lambda$。所以$\lambda$就是一个不动点。
 
-1. $\lambda_1\neq\lambda_2$：
+- $\lambda_1\neq\lambda_2$：
   
   $$a_{n+1}-\lambda_1=(p-\lambda_1r)\cdot\frac{a_n-\lambda_1}{ra_n+s}$$
   
@@ -52,7 +52,7 @@ $$r\lambda^2-p\lambda=q-\lambda s\Rightarrow r\lambda^2+(s-p)\lambda-q=0$$
   
   所以$\lbrace\frac{a_n-\lambda_1}{a_n-\lambda_2}\rbrace$是等比数列。
   
-2. $\lambda_1\neq\lambda_2=\lambda$：
+- $\lambda_1\neq\lambda_2=\lambda$：
   
   $$a_{n+1}-\lambda=(p-\lambda r)\cdot\frac{a_n-\lambda}{ra_n+s}$$
   
@@ -115,7 +115,7 @@ $$(-\lambda)(p-\lambda)=1\cdot q\Rightarrow \lambda^2-p\lambda-q=0$$
 
 将$k$阶递推式中最靠后的一项标为$\lambda^k$，往前依次标为$\lambda^{k-1},\dots,\lambda^0$，得到的关于$\lambda$的方程称为特征方程，对应的$\lambda$的解称为特征根。上面关于$\lambda$的一元二次方程即为二阶线性递推的特征方程。
 
-1. $\lambda_1\neq\lambda_2$：由韦达定理知$\lambda_1+\lambda_2=p$，代入得
+- $\lambda_1\neq\lambda_2$：由韦达定理知$\lambda_1+\lambda_2=p$，代入得
   
   $$a_{n+2}-\lambda_1 a_{n+1}=\lambda_2(a_{n+1}-\lambda_1 a_n)$$
   
@@ -127,7 +127,7 @@ $$(-\lambda)(p-\lambda)=1\cdot q\Rightarrow \lambda^2-p\lambda-q=0$$
   
   所以$\lbrace\frac{a_{n+1}-\lambda_1 a_n}{a_{n+1}-\lambda_2 a_n}\rbrace$是等比数列。
   
-2. $\lambda_1=\lambda_2=\lambda$：根据等比数列求和，有
+- $\lambda_1=\lambda_2=\lambda$：根据等比数列求和，有
   
   $$a_{n+2}-\lambda a_{n+1}=\lambda(a_{n+1}-\lambda a_n)=\lambda^n(a_2-\lambda a_1)$$
   
@@ -139,8 +139,8 @@ $$(-\lambda)(p-\lambda)=1\cdot q\Rightarrow \lambda^2-p\lambda-q=0$$
 
 更一般地：
 
-1. $\lambda_1\neq\lambda_2$时，$a_n=c_1\cdot\lambda_1^n+c_2\cdot\lambda_2^n$。
-2. $\lambda_1=\lambda_2=\lambda$时，$a_n=(c_1+nc_2)\cdot\lambda^n$。
+- $\lambda_1\neq\lambda_2$时，$a_n=c_1\cdot\lambda_1^n+c_2\cdot\lambda_2^n$。
+- $\lambda_1=\lambda_2=\lambda$时，$a_n=(c_1+nc_2)\cdot\lambda^n$。
 
 其中系数$c_1,c_2$由数列当中任意两项确定。
 
