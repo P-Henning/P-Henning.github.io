@@ -17,7 +17,7 @@ show_edit_on_github: true
 const int maxn=1e5+5;
 
 template<typename Tp>
-class indexed_tree{
+class fenwick_tree{
 public:
   Tp c[maxn];int n;
   void modify(int x,Tp d){
@@ -38,7 +38,7 @@ public:
 const int maxn=1e5+5;
 
 template<typename Tp>
-class indexed_tree{
+class fenwick_tree{
 public:
   Tp c[maxn];int n;
   void modify(int x,int y,Tp d){
@@ -59,7 +59,7 @@ public:
 const int maxn=1e5+5;
 
 template<typename Tp>
-class indexed_tree{
+class fenwick_tree{
 public:
   Tp c[maxn],c2[maxn];int n;
   void modify(int x,int y,Tp d){
@@ -84,14 +84,14 @@ public:
 ```cpp
 const int maxn=1e5+5;
 
-class unionfind_set{
+class disjoint_set{
 public:
   int fa[maxn];
   void init(int x){fa[x]=x;}
   int find(int x){
     return fa[x]==x?x:fa[x]=find(fa[x]);
   }
-  void union(int x,int y){
+  void unionset(int x,int y){
     int fx=find(x),fy=find(y);
     if(fx!=fy)fa[fx]=fy;
   }
@@ -104,7 +104,7 @@ public:
 const int maxn=1e5+5;
 
 template<typename Tp>
-class unionfind_set{
+class disjoint_set{
 public:
   int fa[maxn];Tp dist[maxn];
   void init(int x){fa[x]=x,dist[x]=0;}
@@ -114,7 +114,7 @@ public:
     dist[x]+=dist[fa[x]];
     return fa[x]=anc;
   }
-  void union(int x,int y,Tp len){
+  void unionset(int x,int y,Tp len){
     int fx=find(x),fy=find(y);
     if(fx!=fy)fa[fy]=fx,dist[fy]=len+dist[x]-dist[y];
   }
