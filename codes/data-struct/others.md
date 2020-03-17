@@ -91,7 +91,7 @@ public:
   int find(int x){
     return fa[x]==x?x:fa[x]=find(fa[x]);
   }
-  void unionset(int x,int y){
+  void merge(int x,int y){
     int fx=find(x),fy=find(y);
     if(fx!=fy)fa[fx]=fy;
   }
@@ -114,7 +114,7 @@ public:
     dist[x]+=dist[fa[x]];
     return fa[x]=anc;
   }
-  void unionset(int x,int y,Tp len){
+  void merge(int x,int y,Tp len){
     int fx=find(x),fy=find(y);
     if(fx!=fy)fa[fy]=fx,dist[fy]=len+dist[x]-dist[y];
   }
