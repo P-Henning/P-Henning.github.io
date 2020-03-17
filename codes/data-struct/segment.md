@@ -201,11 +201,13 @@ public:
 
 ## 树链剖分
 
+### 重链剖分
+
 ```cpp
 const int maxn=1e5+5;
 
 template<typename Tp>
-class treechain_split{
+class decomposition{
 private:
   class segment_tree{
   public:
