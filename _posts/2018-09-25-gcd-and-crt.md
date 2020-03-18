@@ -22,7 +22,7 @@ $$a\bmod b=a-\left\lfloor\frac ab\right\rfloor b=\left(\frac ad-\left\lfloor\fra
 
 又设$d'\vert b,d'\vert(a\bmod b)$，则$\frac b{d'},\frac{a\bmod b}{d'}\in \mathbb Z$。同理可得
 
-$$a=\left\lfloor\frac ab\right\rfloor b+(a\bmod b)=(\left\lfloor\frac ab\right\rfloor\frac b{d'}+\frac{a\bmod b}{d'})d'$$
+$$a=\left\lfloor\frac ab\right\rfloor b+(a\bmod b)=\left(\left\lfloor\frac ab\right\rfloor\frac b{d'}+\frac{a\bmod b}{d'}\right)d'$$
 
 即$d'\vert a$，即$d'$是$a$和$b$的公约数。于是$a,b$的公约数与$b,a\bmod b$的公约数相同，所以
 
