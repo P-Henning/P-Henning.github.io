@@ -169,7 +169,7 @@ $n=5,m=3$，直接套通项公式？并不。$5$个区域地位对等，$3$种�
 
 $$n=p_1^{r_1}p_2^{r_2}\cdots p_k^{r_k}$$
 
-其中$p_1,\dots,p_k$为不同质数，$r_1,\dots,r_k\in\mathbb N^*$。则$n$的所有约数之和为
+其中$p_1,\dots,p_k$为不同质数，$r_1,\dots,r_k\in\mathbb N^{\ast}$。则$n$的所有约数之和为
 
 $$\begin{aligned}
 &\left(1+p_1+\cdots+p_1^{r_1}\right)\left(1+p_2+\cdots+p_2^{r_2}\right)\cdots\left(1+p_k+\cdots+p_k^{r_k}\right)\\
@@ -201,9 +201,9 @@ $$\begin{aligned}
 
 $$I_n=n!\cdot C_{n-1}$$
 
-**例：** 求证：对任意的$n\in\mathbb N^*$，$\left(\sqrt 2+1\right)^n$都能写成$\sqrt m+\sqrt{m-1},m\in\mathbb N^*$的形式。（例如$\left(\sqrt 2+1\right)^2=\sqrt 9+\sqrt 8$）
+**例：** 求证：$\forall n\in\mathbb N^{\ast}$，$\left(\sqrt 2+1\right)^n$都能写成$\sqrt m+\sqrt{m-1},m\in\mathbb N^{\ast}$的形式。（例如$\left(\sqrt 2+1\right)^2=\sqrt 9+\sqrt 8$）
 
-根据二项式定理，$\left(\sqrt 2+1\right)^n=A+B\sqrt 2,A,B\in\mathbb N^*$。因此需证明$A^2-\left(B\sqrt 2\right)^2=\pm 1$。
+根据二项式定理，$\left(\sqrt 2+1\right)^n=A+B\sqrt 2,A,B\in\mathbb N^{\ast}$。因此需证明$A^2-\left(B\sqrt 2\right)^2=\pm 1$。
 
 由于有
 
