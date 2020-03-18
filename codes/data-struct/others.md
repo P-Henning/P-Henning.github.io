@@ -139,7 +139,6 @@ class sparse_table{
 public:
   Tp f[maxn][25];
   void build(Tp *a,int n){
-    for(int i=2;i<=n;i++)lg[i]=lg[i>>1]+1;
     for(int i=1;i<=n;i++)f[i][0]=a[i];
     for(int j=1;j<=log_f[n];j++)
       for(int i=1;i<=n-(1<<j)+1;i++)
