@@ -170,7 +170,7 @@ for(int i=s;i;i-=i&-i)int x=i&-i;
   $$\begin{aligned}
   2^ix&=x\ll i\\
   \left\lfloor\frac x{2^i}\right\rfloor&=x\gg i\\
-  x\mod 2^i&=x\land((1\ll i)-1)
+  x\bmod 2^i&=x\land((1\ll i)-1)
   \end{aligned}$$
   
   其中除法无论正负都是向下取整，负数取模会得到非负的结果。
