@@ -50,7 +50,7 @@ $$r\lambda^2-p\lambda=q-\lambda s\Rightarrow r\lambda^2+(s-p)\lambda-q=0$$
   
   $$\frac{a_{n+1}-\lambda_1}{a_{n+1}-\lambda_2}=\frac{p-\lambda_1r}{p-\lambda_2r}\cdot\frac{a_n-\lambda_1}{a_n-\lambda_2}$$
   
-  所以$\lbrace\frac{a_n-\lambda_1}{a_n-\lambda_2}\rbrace$是等比数列。
+  所以$\left\lbrace\frac{a_n-\lambda_1}{a_n-\lambda_2}\right\rbrace$是等比数列。
   
 - $\lambda_1\neq\lambda_2=\lambda$：
   
@@ -67,7 +67,7 @@ $$r\lambda^2-p\lambda=q-\lambda s\Rightarrow r\lambda^2+(s-p)\lambda-q=0$$
   
   $$\frac 1{a_{n+1}-\lambda}-\frac 1{a_n-\lambda}=\frac r{p-\lambda r}$$
   
-  所以$\lbrace\frac 1{a_n-\lambda}\rbrace$是等差数列。
+  所以$\left\lbrace\frac 1{a_n-\lambda}\right\rbrace$是等差数列。
 
 **补充：数列极限**
 
@@ -81,9 +81,9 @@ $$a=f(a)$$
 
 先求不动点，令$x=\frac{3+3x}{3+x}\Rightarrow x=\pm\sqrt 3$。由于题目给定了数列的首项，数列极限只可能有一个。考虑数列的每一项与不动点的差：
 
-$$x_{n+1}-\sqrt 3=\frac{3-\sqrt 3}{3+x_n}(x_n-\sqrt 3)\tag 1$$
+$$x_{n+1}-\sqrt 3=\frac{3-\sqrt 3}{3+x_n}\left(x_n-\sqrt 3\right)\tag 1$$
 
-$$x_{n+1}+\sqrt 3=\frac{3+\sqrt 3}{3+x_n}(x_n+\sqrt 3)\tag 2$$
+$$x_{n+1}+\sqrt 3=\frac{3+\sqrt 3}{3+x_n}\left(x_n+\sqrt 3\right)\tag 2$$
 
 显然$x_n>0$。由$(1)$式可知$x_{n+1}-\sqrt 3$与$x_n-\sqrt 3$同号。又因为$x_1-\sqrt 3<0$，所以$x_n-\sqrt 3<0\Rightarrow x_n<\sqrt 3$。
 
@@ -125,7 +125,7 @@ $$(-\lambda)(p-\lambda)=1\cdot q\Rightarrow \lambda^2-p\lambda-q=0$$
   
   $$\frac{a_{n+2}-\lambda_1 a_{n+1}}{a_{n+2}-\lambda_2 a_{n+1}}=\frac{\lambda_2}{\lambda_1}\cdot\frac{a_{n+1}-\lambda_1 a_n}{a_{n+1}-\lambda_2 a_n}$$
   
-  所以$\lbrace\frac{a_{n+1}-\lambda_1 a_n}{a_{n+1}-\lambda_2 a_n}\rbrace$是等比数列。
+  所以$\left\lbrace\frac{a_{n+1}-\lambda_1 a_n}{a_{n+1}-\lambda_2 a_n}\right\rbrace$是等比数列。
   
 - $\lambda_1=\lambda_2=\lambda$：根据等比数列求和，有
   
@@ -135,7 +135,7 @@ $$(-\lambda)(p-\lambda)=1\cdot q\Rightarrow \lambda^2-p\lambda-q=0$$
   
   $$\frac{a_{n+2}}{\lambda^{n+2}}-\frac{a_{n+1}}{\lambda^{n+1}}=\frac 1{\lambda^2}(a_2-\lambda a_1)$$
   
-  所以$\lbrace\frac{a_n}{\lambda^n}\rbrace$是等差数列。
+  所以$\left\lbrace\frac{a_n}{\lambda^n}\right\rbrace$是等差数列。
 
 更一般地：
 
@@ -163,12 +163,12 @@ a_{n+1}a_{n-1}-a_n^2&=6^{n-1}
 两式相除，移项，得
 
 $$\begin{aligned}
-a_{n+2}a_n-a_{n+1}^2&=6(a_{n+1}a_{n-1}-a_n^2)\\
+a_{n+2}a_n-a_{n+1}^2&=6\left(a_{n+1}a_{n-1}-a_n^2\right)\\
 a_n(a_{n+2}+6a_n)&=a_{n+1}(a_{n+1}+6a_{n-1})\\
 \frac{a_{n+2}+6a_n}{a_{n+1}}&=\frac{a_{n+1}+6a_{n-1}}{a_n}
 \end{aligned}$$
 
-于是数列$\lbrace\frac{a_{n+2}+6a_n}{a_{n+1}}\rbrace$前后两项始终相等，为一常数$k$。则
+于是数列$\left\lbrace\frac{a_{n+2}+6a_n}{a_{n+1}}\right\rbrace$前后两项始终相等，为一常数$k$。则
 
 $$a_{n+2}+6a_n=ka_{n+1}$$
 
@@ -176,7 +176,7 @@ $$a_{n+2}+6a_n=ka_{n+1}$$
 
 **例：** （清华领军）数列$\lbrace a_n\rbrace$满足$a_1=1,a_2=2,a_{n+2}=6a_{n+1}-a_n$，则（）
 
-- [ ] A. $\lbrace a_{n+1}^2-a_{n+2}a_n\rbrace$为常数列
+- [ ] A. $\left\lbrace a_{n+1}^2-a_{n+2}a_n\right\rbrace$为常数列
 - [ ] B. $\lbrace 8a_{n+1}a_n-7\rbrace$各项为完全平方数
 - [ ] C. $\lbrace 4a_{n+1}a_n-7\rbrace$各项为完全平方数
 - [ ] D. $a_n\equiv 1\pmod 9$或$a_n\equiv 2\pmod 9$
@@ -188,7 +188,7 @@ $$\begin{aligned}
 a_{n+2}a_n-a_{n+1}^2&=a_{n+1}a_{n-1}-a_n^2
 \end{aligned}$$
 
-于是$\lbrace a_{n+2}a_n-a_{n+1}^2\rbrace$为常数列，选项A正确。
+于是$\left\lbrace a_{n+2}a_n-a_{n+1}^2\right\rbrace$为常数列，选项A正确。
 
 将$a_1,a_2,a_3$代入上式，求出这个常数为$-7$。将$-7=a_{n+2}a_n-a_{n+1}^2=(6a_{n+1}-a_n)a_n-a_{n+1}^2$代入选项B、C即可判断。
 
