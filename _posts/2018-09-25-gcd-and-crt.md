@@ -12,21 +12,21 @@ tags: 数论
 
 计算两个整数$a,b$的最大公约数$\text{gcd($a,b$)}$。
 
-$a\mod b$可以表示成$a-\left\lfloor\frac ab\right\rfloor b$。设$d\vert a,d\vert b$，则$\frac ad,\frac bd\in \mathbb Z$，于是有
+$a\bmod b$可以表示成$a-\left\lfloor\frac ab\right\rfloor b$。设$d\vert a,d\vert b$，则$\frac ad,\frac bd\in \mathbb Z$，于是有
 
-$$a\mod b=a-\left\lfloor\frac ab\right\rfloor b=\left(\frac ad-\left\lfloor\frac ab\right\rfloor\frac bd\right)d$$
+$$a\bmod b=a-\left\lfloor\frac ab\right\rfloor b=\left(\frac ad-\left\lfloor\frac ab\right\rfloor\frac bd\right)d$$
 
-因为$\frac ad-\left\lfloor\frac ab\right\rfloor\frac bd$是整数，所以$d\vert(a\mod b)$，即$d$是$b$和$a\mod b$的公约数。
+因为$\frac ad-\left\lfloor\frac ab\right\rfloor\frac bd$是整数，所以$d\vert(a\bmod b)$，即$d$是$b$和$a\bmod b$的公约数。
 
 <!--more-->
 
-又设$d'\vert b,d'\vert(a\mod b)$，则$\frac b{d'},\frac{a\mod b}{d'}\in \mathbb Z$。同理可得
+又设$d'\vert b,d'\vert(a\bmod b)$，则$\frac b{d'},\frac{a\bmod b}{d'}\in \mathbb Z$。同理可得
 
-$$a=\left\lfloor\frac ab\right\rfloor b+(a\mod b)=(\left\lfloor\frac ab\right\rfloor\frac b{d'}+\frac{a\mod b}{d'})d'$$
+$$a=\left\lfloor\frac ab\right\rfloor b+(a\bmod b)=(\left\lfloor\frac ab\right\rfloor\frac b{d'}+\frac{a\bmod b}{d'})d'$$
 
-即$d'\vert a$，即$d'$是$a$和$b$的公约数。于是$a,b$的公约数与$b,a\mod b$的公约数相同，所以
+即$d'\vert a$，即$d'$是$a$和$b$的公约数。于是$a,b$的公约数与$b,a\bmod b$的公约数相同，所以
 
-$$\text{gcd}(a,b)=\text{gcd}(b,a\mod b)$$
+$$\text{gcd}(a,b)=\text{gcd}(b,a\bmod b)$$
 
 根据上式，$a,b$的值不断减小，于是可以递归求解，边界为$\text{gcd}(a,0)=a$。
 
@@ -43,13 +43,13 @@ int gcd(int a,int b){
 
 $$\begin{aligned}
 ax_1+by_1&=\text{gcd}(a,b)\\
-bx_2+(a\mod b)y_2&=\text{gcd}(b,a\mod b)
+bx_2+(a\bmod b)y_2&=\text{gcd}(b,a\bmod b)
 \end{aligned}$$
 
 由欧几里得算法得
 
 $$\begin{aligned}
-ax_1+by_1&=bx_2+(a\mod b)y_2\\
+ax_1+by_1&=bx_2+(a\bmod b)y_2\\
 &=bx_2+\left(a-\left\lfloor\frac ab\right\rfloor b\right)y_2\\
 &=ay_2+b\left(x_2-\left\lfloor\frac ab\right\rfloor y_2\right)
 \end{aligned}$$
@@ -70,7 +70,7 @@ int ext_gcd(int a,int b,int &x,int &y){
 }
 ```
 
-对于不定方程$ax+by=c$，设$\text{gcd}(a,b)=d$，用扩展欧几里得算法求出的方程$ax+by=d$的解为$x',y'$。则当$c\mod d=0$时，原方程有通解：
+对于不定方程$ax+by=c$，设$\text{gcd}(a,b)=d$，用扩展欧几里得算法求出的方程$ax+by=d$的解为$x',y'$。则当$c\bmod d=0$时，原方程有通解：
 
 $$\begin{cases}
 x=\frac cdx'+\frac bdk\\
@@ -90,9 +90,9 @@ x\equiv b_2\pmod{w_2}\\
 x\equiv b_n\pmod{w_n}
 \end{cases}$$
 
-令$p=\prod\limits_{i=1}^nw_i$，$m_i=\frac p{w_i}$，$m_i{m_i}^{-1}\equiv1\pmod{w_i}$，则上面方程组的解为
+令$p=\prod\limits_{i=1}^nw_i$，$m_i=\frac p{w_i}$，$m_i{m_i}^{-1}\equiv 1\pmod{w_i}$，则上面方程组的解为
 
-$$x=\sum_{i=1}^nm_i{m_i}^{-1}b_i\mod p$$
+$$x=\sum_{i=1}^nm_i{m_i}^{-1}b_i\bmod p$$
 
 将$x$代入任意一个方程即可得证，此处略。
 
