@@ -56,10 +56,12 @@ codes:
     children:
       - title:  线性结构
         url:    /codes/data-struct/linear
-      - title:  线段树相关
+      - title:  线段树
         url:    /codes/data-struct/segment
-      - title:  平衡树相关
+      - title:  平衡树
         url:    /codes/data-struct/balance
+      - title:  树链剖分与LCT
+        url:    /codes/data-struct/decompose-and-lct
       - title:  其它
         url:    /codes/data-struct/others
   - title:      字符串
