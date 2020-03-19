@@ -82,7 +82,7 @@ public:
   node nodes[maxn],*root;int tot;
 private:
   void build(node *&p,Tp *a,int l,int r){
-    p=nodes+(++tot);p->init();
+    p=nodes+(++tot);p->init(l,r);
     if(l==r){p->sum=a[l];return;}
     build(p->son[0],a,l,l+r>>1);
     build(p->son[1],a,(l+r>>1)+1,r);
@@ -207,7 +207,7 @@ public:
 const int maxn=1e5+5;
 
 template<typename Tp>
-class decomposition{
+class heavypath_decomposition{
 private:
   class segment_tree{
   public:
@@ -320,5 +320,48 @@ public:
     if(dep[u]>dep[v])swap(u,v);
     return u;
   }
+};
+```
+
+### 长链剖分
+
+```cpp
+const int maxn=1e5+5;
+
+class longpath_decomposition{
+public:
+  struct edge{
+    int to;edge *next;
+    edge(int to=0,edge *next=0):to(to),next(next){}
+  };
+  int n,edgtot;
+  edge edges[maxn],*now[maxn];
+  int fa[maxn],son[maxn],top[maxn],len[maxn];
+  void init(int n){
+    this->n=n,edgtot=0;
+    memset(now,0,sizeof(now));
+  }
+  void insert(int u,int v){
+    edges[++edgtot]=edge(v,now[u]),now[u]=edges+edgtot;
+  }
+private:
+  void dfs1(int u,int cfa){
+    fa[u]=cfa,son[u]=0;
+    for(edge *e=now[u];e;e=e->next){
+      int v=e->to;dfs1(v,u);
+      if(len[v]>len[son[u]])son[u]=v;
+    }
+    len[u]=len[son[u]]+1;
+  }
+  void dfs2(int u,int anc){
+    top[u]=anc;
+    if(son[u])dfs2(son[u],anc);
+    for(edge *e=now[u];e;e=e->next){
+      int v=e->to;
+      if(v!=fa[u]&&v!=son[u])dfs2(v,v);
+    }
+  }
+public:
+  void build(int u){dfs1(u,0);dfs2(u,u);}
 };
 ```
