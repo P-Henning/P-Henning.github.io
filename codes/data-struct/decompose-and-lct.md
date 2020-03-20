@@ -178,7 +178,7 @@ public:
 
 ---
 
-​## Link-Cut树
+## Link-Cut树
 
 ```cpp
 const int maxn=1e5+5;
