@@ -3,7 +3,7 @@ header:
       en      : Archive
       zh-Hans : 归档
       zh-Hant : 歸檔
-    url: /archive.html
+    url: /archive
 
   - titles:
       en      : Codes
@@ -15,7 +15,7 @@ header:
       en      : Challenge!
       zh-Hans : 挑战！
       zh-Hant : 挑戰！
-    url: /challenge/challenge-1
+    url: /challenges
 
   - titles:
       en      : IDE
@@ -27,7 +27,13 @@ header:
       en      : Message
       zh-Hans : 留言
       zh-Hant : 留言
-    url: /message.html
+    url: /message
+    
+  - titles:
+      en      : About
+      zh-Hans : 关于
+      zh-Hant : 關於
+    url: /about
 
 codes:
   - title:      数学
@@ -72,25 +78,3 @@ codes:
         url:    /codes/string/automaton
       - title:  其它
         url:    /codes/string/others
-
-challenge:
-  - title:      挑战一
-    children:
-      - title:  The Prologue
-        url:    /challenge/challenge-1
-  - title:      挑战二
-    children:
-      - title:  Circles
-        url:    /challenge/challenge-2
-  - title:      挑战三
-    children:
-      - title:  Picture Puzzle of Chino (I)
-        url:    /challenge/challenge-3-I
-      - title:  Picture Puzzle of Chino (II)
-        url:    /challenge/challenge-3-II
-  - title:      挑战五
-    children:
-      - title:  How to Get Highest Score in Garupa (I)
-        url:    /challenge/challenge-5-I
-      - title:  How to Get Highest Score in Garupa (II)
-        url:    /challenge/challenge-5-II
