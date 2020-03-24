@@ -3,7 +3,7 @@ title: CH3OH笔记：数列递推形式
 author: P-Henning
 permalink: /CH3OH-sequence
 key: CH3OH-sequence
-tags: 递推
+tags: 笔记
 ---
 
 ## 数列递推形式
