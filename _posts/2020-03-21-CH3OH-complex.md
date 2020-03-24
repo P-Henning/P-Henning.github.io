@@ -3,7 +3,7 @@ title: CH3OH笔记：复数与多项式
 author: P-Henning
 permalink: /CH3OH-complex
 key: CH3OH-complex
-tags: 复数
+tags: 笔记
 ---
 
 ## 复数的三角形式
