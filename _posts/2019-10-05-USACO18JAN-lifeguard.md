@@ -3,7 +3,7 @@ title: USACO18JAN Lifeguards P
 author: P-Henning
 permalink: /USACO18JAN-lifeguard
 key: USACO18JAN-lifeguard
-tags: [动态规划, 单调队列]
+tags: [题目, 动态规划]
 ---
 
 #### 题目大意
