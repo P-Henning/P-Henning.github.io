@@ -3,10 +3,12 @@ title: 区间贪心问题
 author: P-Henning
 permalink: /interval-greedy
 key: interval-greedy
-tags: 贪心
+tags: [笔记, 贪心]
 ---
 
-## 区间选点问题
+## 区间贪心问题
+
+### 区间选点问题
 
 数轴上有$n$个闭区间$[a_i,b_i]$。在数轴上选出尽量少的关键点，使得每个区间内都至少有一个关键点。
 
@@ -27,7 +29,7 @@ for(int i=2;i<=n;i++)
   if(d[i].l>cur)cur=d[i].r,ans++;
 ```
 
-## 选择不相交区间
+### 选择不相交区间
 
 数轴上有$n$个闭区间$[a_i,b_i]$。从中选择尽量多的区间，使得这些区间两两没有公共点。
 
@@ -46,14 +48,14 @@ for(int i=2;i<=n;i++)
   if(d[i].l>cur)cur=d[i].r,ans++;
 ```
 
-## 区间覆盖问题
+### 区间覆盖问题
 
 数轴上有$n$个闭区间$[a_i,b_i]$。从中选择尽量少的区间，使得这些区间覆盖一段指定区间$[s,t]$。
 
 将区间按左端点由小到大排序，若左端点相同，按右端点由大到小排序。若第一个区间起点在$s$右侧，则无解。否则从左往右讨论每个区间，优先选择右端点大的区间。记录目前已选区间中往右最远能覆盖到的位置$cur$。讨论所有$l\leqslant cur$且未被讨论过的区间，记录其中右端点的最大值$maxr$，若$maxr>cur$，则选择该区间后$cur$可以延伸到$maxr$的位置，否则无解。
 
 ```cpp
-struct node{int r,l;}d[maxn];
+struct node{int l,r;}d[maxn];
 bool cmp(node a,node b){
   if(a.l==b.l)return a.r>b.r;
   return a.l<b.l;
