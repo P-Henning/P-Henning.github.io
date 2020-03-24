@@ -3,7 +3,7 @@ title: CH3OH笔记：计数原理与二项式定理
 author: P-Henning
 permalink: /CH3OH-combine
 key: CH3OH-combine
-tags: 组合数学
+tags: [笔记, 组合数学]
 ---
 
 ## 计数原理与二项式定理
@@ -203,7 +203,7 @@ $$\begin{aligned}
 
 $$I_n=n!\cdot C_{n-1}$$
 
-**例：** 求证：$\forall n\in\mathbb N^{\ast}$，$\left(\sqrt 2+1\right)^n$都能写成$\sqrt m+\sqrt{m-1},m\in\mathbb N^{\ast}$的形式。（例如$\left(\sqrt 2+1\right)^2=\sqrt 9+\sqrt 8$）
+**例：** 求证：$\forall n\in\mathbb N^{\ast}$，$\left(\sqrt 2+1\right)^n$都能写成$\sqrt m+\sqrt{m-1},m\in\mathbb N^{\ast}$的形式。例如$\left(\sqrt 2+1\right)^2=\sqrt 9+\sqrt 8$。
 
 根据二项式定理，$\left(\sqrt 2+1\right)^n=A+B\sqrt 2,A,B\in\mathbb N^{\ast}$。因此需证明$A^2-\left(B\sqrt 2\right)^2=\pm 1$。
 
