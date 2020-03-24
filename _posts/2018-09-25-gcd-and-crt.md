@@ -3,7 +3,7 @@ title: 欧几里得算法与中国剩余定理
 author: P-Henning
 permalink: /gcd-and-crt
 key: gcd-and-crt
-tags: 数论
+tags: [笔记, 数论]
 ---
 
 ## 欧几里得算法
