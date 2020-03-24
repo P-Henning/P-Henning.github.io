@@ -3,7 +3,7 @@ title: 位运算入门
 author: P-Henning
 permalink: /bit-operation
 key: bit-operation
-tags: 位运算
+tags: 笔记
 ---
 
 ## 整数的存储
@@ -186,11 +186,11 @@ void swap2(int &a,int &b){a=a+b,b=a-b,a=a-b;}
 ```
 
 - 构造常数
-  - `unsigned int`的上限：`~0u`，`-1u`，`0xffffffff`
-  - `int`的上限：`~0u>>1`，`-1u>>1`，`0x7fffffff`
-  - `int`的下限：`1<<31`，`0x80000000`
-  - `long long`的上限：`0ull>>1`，`-1ull>>1`，`0x7fffffffffffffff`
-  - `long long`的下限：`1ll<<63`，`0x8000000000000000`
+  - `unsigned int`的上限：`~0u` `-1u` `0xffffffff`
+  - `int`的上限：`~0u>>1` `-1u>>1` `0x7fffffff`
+  - `int`的下限：`1<<31` `0x80000000`
+  - `long long`的上限：`0ull>>1` `-1ull>>1` `0x7fffffffffffffff`
+  - `long long`的下限：`1ll<<63` `0x8000000000000000`
 
 ## 完备性
 
