@@ -1,5 +1,5 @@
 ---
-title: USACO18JAN Lifeguards P
+title: USACO08NOV Toys
 author: P-Henning
 permalink: /USACO08NOV-Toy
 key: USACO08NOV-Toy
