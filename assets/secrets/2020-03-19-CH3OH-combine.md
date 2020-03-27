@@ -1,9 +1,15 @@
 ---
+layout: article
 title: CH3OH笔记：计数原理与二项式定理
 author: P-Henning
 permalink: /CH3OH-combine
 key: CH3OH-combine
-tags: [笔记, 组合数学]
+sharing: true
+license: true
+aside:
+  toc: true
+show_edit_on_github: true
+show_subscribe: true
 ---
 
 ## 计数原理与二项式定理
