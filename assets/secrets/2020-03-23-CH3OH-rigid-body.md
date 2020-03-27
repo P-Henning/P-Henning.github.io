@@ -1,9 +1,15 @@
 ---
+layout: article
 title: CH3OH笔记：刚体初步
 author: P-Henning
 permalink: /CH3OH-rigid-body
 key: CH3OH-rigid-body
-tags: 笔记
+sharing: true
+license: true
+aside:
+  toc: true
+show_edit_on_github: true
+show_subscribe: true
 ---
 
 ## 力矩平衡
