@@ -1,9 +1,15 @@
 ---
+layout: article
 title: CH3OH笔记：数列递推形式
 author: P-Henning
 permalink: /CH3OH-sequence
 key: CH3OH-sequence
-tags: 笔记
+sharing: true
+license: true
+aside:
+  toc: true
+show_edit_on_github: true
+show_subscribe: true
 ---
 
 ## 数列递推形式
