@@ -3,12 +3,9 @@ layout: article
 title: CH3OH笔记：复数与多项式
 author: P-Henning
 permalink: /CH3OH-complex
-key: CH3OH-complex
-sharing: true
 license: true
 aside:
   toc: true
-show_edit_on_github: true
 show_subscribe: true
 ---
 
@@ -23,8 +20,6 @@ show_subscribe: true
 $$z=r\cos\theta+r\sin\theta\cdot i=r(\cos\theta+i\sin\theta)$$
 
 上式即为复数的三角形式。
-
-<!--more-->
 
 下面通过三角形式理解复数乘除的几何意义。令$z_1=r_1(\cos\theta_1+i\sin\theta_1)$，$z_2=r_2(\cos\theta_2+i\sin\theta_2)$。对$z_1,z_2$做乘法，得到
 
