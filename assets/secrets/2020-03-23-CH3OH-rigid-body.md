@@ -3,12 +3,9 @@ layout: article
 title: CH3OH笔记：刚体初步
 author: P-Henning
 permalink: /CH3OH-rigid-body
-key: CH3OH-rigid-body
-sharing: true
 license: true
 aside:
   toc: true
-show_edit_on_github: true
 show_subscribe: true
 ---
 
@@ -17,8 +14,6 @@ show_subscribe: true
 初中杠杆平衡知识：$F_1l_1=F_2l_2$
 
 ![](https://s1.ax1x.com/2020/03/22/844YBF.png)
-
-<!--more-->
 
 力$F$与力臂$l$的乘积称为力矩$M$。如果转轴到作用点的距离为$r$，$\alpha$为$\vec F,\vec r$的夹角，就有
 
