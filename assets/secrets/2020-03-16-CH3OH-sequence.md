@@ -3,12 +3,9 @@ layout: article
 title: CH3OH笔记：数列递推形式
 author: P-Henning
 permalink: /CH3OH-sequence
-key: CH3OH-sequence
-sharing: true
 license: true
 aside:
   toc: true
-show_edit_on_github: true
 show_subscribe: true
 ---
 
@@ -23,8 +20,6 @@ $$a_n=f(a_{n-1},a_{n-2},a_{n-3},\dots,a_{n-k})$$
   - 分式线性：$x_{n+1}=\frac{3+3x_n}{3+x_n}$
   - $x_{n+1}=x_n^2+x_n$
 - 二阶线性：$x_{n+1}=x_n+x_{n-1}$
-
-<!--more-->
 
 ### 不动点法
 
