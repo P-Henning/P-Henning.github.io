@@ -3,12 +3,9 @@ layout: article
 title: CH3OH笔记：计数原理与二项式定理
 author: P-Henning
 permalink: /CH3OH-combine
-key: CH3OH-combine
-sharing: true
 license: true
 aside:
   toc: true
-show_edit_on_github: true
 show_subscribe: true
 ---
 
@@ -22,8 +19,6 @@ show_subscribe: true
   
 - 一一映射。
 - 递归（数列）。例如平面上$n$个圆最多把平面分成几部分。~~何老板爬楼梯。~~
-
-<!--more-->
 
 ### 环形染色
 
