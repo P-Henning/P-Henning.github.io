@@ -1,10 +1,10 @@
 ---
 layout: article
+title: 这一切都要从一只蝙蝠说起
+show_title: false
 permalink: /codes/char-pvz
 aside:
   toc: true
-sidebar:
-  nav: codes
 ---
 
 ## `cpp`
