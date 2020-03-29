@@ -1,4 +1,4 @@
-﻿---
+---
 layout: article
 permalink: /codes/char-pvz
 aside:
