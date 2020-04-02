@@ -1,8 +1,8 @@
 ---
 title: USACO08NOV Toys
 author: P-Henning
-permalink: /USACO08NOV-Toy
-key: USACO08NOV-Toy
+permalink: /USACO08NOV-toy
+key: USACO08NOV-toy
 tags: [题目, 二分答案, 贪心]
 ---
 
