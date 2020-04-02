@@ -1,7 +1,7 @@
 ---
 layout: article
-title: 树链剖分与LCT
-permalink: /codes/data-struct/decompose-and-lct
+title: 树剖与LCT
+permalink: /codes/data-struct/hld-and-lct
 aside:
   toc: true
 sidebar:
@@ -17,7 +17,7 @@ show_edit_on_github: true
 const int maxn=1e5+5;
 
 template<typename Tp>
-class heavypath_decomposition{
+class path_decomposition{
 private:
   class segment_tree{
   public:
@@ -35,7 +35,7 @@ private:
     };
     node nodes[maxn],*root;int tot;
     void build(node *&p,Tp *a,int *rnk,int l,int r){
-      p=nodes+(++tot);p->init();
+      p=nodes+(++tot);p->init(l,r);
       if(l==r){p->sum=a[rnk[l]];return;}
       build(p->son[0],a,rnk,l,l+r>>1);
       build(p->son[1],a,rnk,(l+r>>1)+1,r);
@@ -138,15 +138,16 @@ public:
 ```cpp
 const int maxn=1e5+5;
 
-class longpath_decomposition{
+class path_decomposition{
 public:
   struct edge{
     int to;edge *next;
     edge(int to=0,edge *next=0):to(to),next(next){}
   };
-  int n,edgtot;
+  int lg[maxn],n,edgtot;
+  vector<int> up[maxn],down[maxn];
   edge edges[maxn],*now[maxn];
-  int fa[maxn],son[maxn],top[maxn],len[maxn];
+  int fa[maxn][25],son[maxn],dep[maxn],len[maxn],top[maxn];
   void init(int n){
     this->n=n,edgtot=0;
     memset(now,0,sizeof(now));
@@ -155,24 +156,45 @@ public:
     edges[++edgtot]=edge(v,now[u]),now[u]=edges+edgtot;
   }
 private:
-  void dfs1(int u,int cfa){
-    fa[u]=cfa,son[u]=0;
+  void dfs1(int u){
+    dep[u]=dep[fa[u][0]]+1;
+    int k=ceil(log2(dep[u]));
+    for(int i=1;i<=k;i++)fa[u][i]=fa[fa[u][i-1]][i-1];
     for(edge *e=now[u];e;e=e->next){
-      int v=e->to;dfs1(v,u);
-      if(len[v]>len[son[u]])son[u]=v;
+      int v=e->to;
+      if(v!=fa[u][0]){
+        fa[v][0]=u;dfs1(v);
+        if(len[v]>len[son[u]])son[u]=v;
+      }
     }
     len[u]=len[son[u]]+1;
   }
   void dfs2(int u,int anc){
-    top[u]=anc;
+    if(u==(top[u]=anc)){
+      int v1=u,v2=u;
+      for(int i=1;i<=len[u];i++){
+        up[u].push_back(v1);
+        down[u].push_back(v2);
+        v1=fa[v1][0],v2=son[v2];
+      }
+    }
     if(son[u])dfs2(son[u],anc);
     for(edge *e=now[u];e;e=e->next){
       int v=e->to;
-      if(v!=fa[u]&&v!=son[u])dfs2(v,v);
+      if(v!=fa[u][0]&&v!=son[u])dfs2(v,v);
     }
   }
 public:
-  void build(int u){dfs1(u,0);dfs2(u,u);}
+  void build(int u){
+    lg[0]=lg[1]=0;
+    for(int i=2;i<=n;i++)lg[i]=lg[i>>1]+1;
+    dfs1(u);dfs2(u,u);
+  }
+  int findkth(int u,int k){
+    if(!k)return u;
+    u=fa[u][lg[k]],k-=(1<<lg[k])+dep[u]-dep[top[u]];
+    return k>0?up[top[u]][k]:down[top[u]][-k];
+  }
 };
 ```
 
