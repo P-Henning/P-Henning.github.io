@@ -1,8 +1,9 @@
 ---
 layout: article
-title: CH3OH笔记：刚体初步
+title: 刚体初步
 author: P-Henning
-permalink: /CH3OH-rigid-body
+date: 2020-03-23
+permalink: /rigid-body
 license: true
 aside:
   toc: true
