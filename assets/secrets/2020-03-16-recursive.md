@@ -1,8 +1,9 @@
 ---
 layout: article
-title: CH3OH笔记：数列递推形式
+title: 数列递推形式
 author: P-Henning
-permalink: /CH3OH-sequence
+date: 2020-03-16
+permalink: /recursive
 license: true
 aside:
   toc: true
