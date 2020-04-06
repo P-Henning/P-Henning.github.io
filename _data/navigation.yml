@@ -39,17 +39,17 @@ codes:
   - title:      数学
     children:
       - title:  数论
-        url:    /codes/maths/number
+        url:    /codes/math/number
       - title:  组合数学
-        url:    /codes/maths/combine
+        url:    /codes/math/combinatorial
       - title:  计算几何
-        url:    /codes/maths/geometry
+        url:    /codes/math/geometry
       - title:  线性代数
-        url:    /codes/maths/linear
+        url:    /codes/math/linear
   - title:      图论
     children:
       - title:  最短路
-        url:    /codes/graph/short-path
+        url:    /codes/graph/shortest-path
       - title:  最小生成树
         url:    /codes/graph/mst
       - title:  连通性
@@ -60,21 +60,29 @@ codes:
         url:    /codes/graph/network
   - title:      数据结构
     children:
-      - title:  线性结构
-        url:    /codes/data-struct/linear
+      - title:  树状数组
+        url:    /codes/ds/fenwick
       - title:  线段树
-        url:    /codes/data-struct/segment
+        url:    /codes/ds/segment
       - title:  平衡树
-        url:    /codes/data-struct/balance
-      - title:  树剖与LCT
-        url:    /codes/data-struct/hld-and-lct
-      - title:  其它
-        url:    /codes/data-struct/others
+        url:    /codes/ds/balanced
+      - title:  树链剖分
+        url:    /codes/ds/hld
+      - title:  动态树
+        url:    /codes/ds/lct
+      - title:  并查集
+        url:    /codes/ds/dsu
   - title:      字符串
     children:
       - title:  基本算法
         url:    /codes/string/basics
+      - title:  哈希
+        url:    /codes/string/hash
       - title:  自动机
         url:    /codes/string/automaton
-      - title:  其它
-        url:    /codes/string/others
+  - title:      杂项
+    children:
+      - title:  分块
+        url:    /codes/misc/block
+      - title:  倍增
+        url:    /codes/misc/accelerate
