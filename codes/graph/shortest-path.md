@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 最短路
-permalink: /codes/graph/short-path
+permalink: /codes/graph/shortest-path
 aside:
   toc: true
 sidebar:
