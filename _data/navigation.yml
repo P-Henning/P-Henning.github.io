@@ -9,7 +9,7 @@ header:
       en      : Codes
       zh-Hans : 码库
       zh-Hant : 碼庫
-    url: /codes/maths/number
+    url: /codes/math/number
 
   - titles:
       en      : Challenge!
@@ -60,6 +60,8 @@ codes:
         url:    /codes/graph/network
   - title:      数据结构
     children:
+      - title:  并查集
+        url:    /codes/ds/dsu
       - title:  树状数组
         url:    /codes/ds/fenwick
       - title:  线段树
@@ -70,19 +72,11 @@ codes:
         url:    /codes/ds/hld
       - title:  动态树
         url:    /codes/ds/lct
-      - title:  并查集
-        url:    /codes/ds/dsu
   - title:      字符串
     children:
       - title:  基本算法
-        url:    /codes/string/basics
+        url:    /codes/string/algorithm
       - title:  哈希
         url:    /codes/string/hash
       - title:  自动机
         url:    /codes/string/automaton
-  - title:      杂项
-    children:
-      - title:  分块
-        url:    /codes/misc/block
-      - title:  倍增
-        url:    /codes/misc/accelerate
