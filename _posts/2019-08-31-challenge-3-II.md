@@ -3,7 +3,7 @@ title: 挑战三：Picture Puzzle of Chino (II)
 author: P-Henning
 permalink: /challenge-3-II
 key: challenge-3-II
-tags: yuzan1830
+tags: [yuzan1830, 搜索]
 ---
 
 ### 说在前面
@@ -223,7 +223,7 @@ int main(){
 
 A\*搜索最关键的部分是估价函数$h(x)$，它表示从当前状态$x$到目标状态所需步数的估计值。这个估计值应该小于实际所需步数，且要尽可能接近。下面是本蒟蒻针对yuzan1830的这个问题设计的估价函数（设目标状态为$y$，$x_{i_1j_1}=y_{i_2j_2}=k$），也许是个假的估价函数。
 
-$$h(x)=\lfloor\frac 13\sum_{k=1}^9(\vert i_1-i_2\vert+\vert j_1-j_2\vert)\rfloor$$
+$$h(x)=\left\lfloor\frac 13\sum_{k=1}^9\vert i_1-i_2\vert+\vert j_1-j_2\vert\right\rfloor$$
 
 ```cpp
 int h(state st){
