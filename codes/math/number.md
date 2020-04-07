@@ -202,7 +202,7 @@ public:
 
 ## 乘法逆元
 
-### 费马小定�?
+### 费马小定理
 
 ```cpp
 int powmod(int a,int b,int c){
@@ -213,7 +213,7 @@ int powmod(int a,int b,int c){
 #define inv(x,p) powmod(x,p-2,p)
 ```
 
-### 扩欧求�?
+### 扩欧求逆
 
 ```cpp
 int ext_gcd(int a,int b,int &x,int &y){
@@ -227,7 +227,7 @@ int inv(int a,int p){
 }
 ```
 
-### 线性求�?
+### 线性求逆
 
 ```cpp
 void initinv(int *inv,int n,int p){
