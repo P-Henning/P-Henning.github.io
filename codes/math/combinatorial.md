@@ -11,7 +11,7 @@ show_edit_on_github: true
 
 ## 排列组合
 
-### 组合�?
+### 组合数
 
 ```cpp
 int C(int a,int b){
