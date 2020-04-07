@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 平衡�?
+title: 平衡树
 permalink: /codes/ds/balanced
 aside:
   toc: true
@@ -106,7 +106,7 @@ public:
 
 ---
 
-## 伸展�?
+## 伸展树
 
 ### 权值伸展树
 
@@ -214,7 +214,7 @@ public:
 };
 ```
 
-### 区间伸展�?
+### 区间伸展树
 
 ```cpp
 const int maxn=1e5+5;
@@ -352,7 +352,7 @@ public:
 
 ---
 
-## K-D�?
+## K-D树
 
 ```c++
 const int maxn=1e5+5;
