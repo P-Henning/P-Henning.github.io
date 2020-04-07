@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 线性代�?
+title: 线性代数
 permalink: /codes/math/linear
 aside:
   toc: true
@@ -42,7 +42,7 @@ struct matrix{
 
 ---
 
-## 高斯消元�?
+## 高斯消元法
 
 ```cpp
 const int maxn=100+5;
