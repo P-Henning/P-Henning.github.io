@@ -32,7 +32,8 @@ struct point{
 
 ---
 
-## Graham扫描�?
+## Graham扫描法
+
 ```cpp
 const int maxn=1e5+5;
 
@@ -61,7 +62,7 @@ void graham(point<Tp> *a,int n){
 ```cpp
 #define cross(a,b,c) (((b)-(a))*((c)-(a)))
 template<typename Tp>
-Tp caliper_rotate(point<Tp> *h,int tot){
+Tp diameter(point<Tp> *h,int tot){
   Tp ans=0;
   for(int i=1,j=2;i<=tot;i++){
     while(cross(h[i],h[i%tot+1],h[j+1])>cross(h[i],h[i%tot+1],h[j]))j=j%tot+1;
