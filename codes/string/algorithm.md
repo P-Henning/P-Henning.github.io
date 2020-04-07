@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 基本算法
-permalink: /codes/string/basics
+permalink: /codes/string/algorithm
 aside:
   toc: true
 sidebar:
@@ -12,7 +12,7 @@ show_edit_on_github: true
 ## 最小表示法
 
 ```cpp
-int minr(char *s){
+int findmin(char *s){
   int i=1,j=2,k=0;
   int len=strlen(s+1);
   while(i<=len&&j<=len&&k<len){
@@ -92,45 +92,12 @@ void initfail(){
     if(maxlen<i+fail[i]-1)p=i,maxlen=i+fail[i]-1;
   }
 }
-void findext(char *s){
+void initext(char *s){
   int len=strlen(s+1),p=0,maxlen=0;
   for(int i=1;i<=len;i++){
     if(i<=maxlen)ext[i]=min(fail[i-p+1],maxlen-i+1);
     while(i+ext[i]<=len&&s[i+ext[i]]==t[ext[i]+1])ext[i]++;
     if(maxlen<i+ext[i]-1)p=i,maxlen=i+ext[i]-1;
   }
-}
-```
-
----
-
-## 字符串哈希
-
-### BKDR哈希
-
-```cpp
-typedef unsigned int _int;
-
-_int bkdr_hash(char *s){
-  _int ha=0,seed=131;
-  while(*s)ha=ha*seed+(*s++);
-  return ha&0x7ffff;
-}
-```
-
-### 区间哈希
-
-```cpp
-typedef unsigned int _int;
-const int maxn=1e5+5;
-
-_int ha[maxn],pw[maxn],p=233;
-void inithash(char *s){
-  int len=strlen(s+1);pw[0]=1;
-  for(int i=1;i<=len;i++)ha[i]=ha[i-1]*p+s[i];
-  for(int i=1;i<=len;i++)pw[i]=pw[i-1]*p;
-}
-_int query(int l,int r){
-  return ha[r]-ha[l-1]*pw[r-l+1];
 }
 ```
