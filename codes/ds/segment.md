@@ -1,6 +1,6 @@
 ---
 layout: article
-title: 线段�?
+title: 线段树
 permalink: /codes/ds/segment
 aside:
   toc: true
@@ -9,7 +9,7 @@ sidebar:
 show_edit_on_github: true
 ---
 
-## 线段�?
+## 线段树
 
 ### 单点修改+区间查询
 
@@ -109,7 +109,7 @@ public:
 };
 ```
 
-### 动态开点与线段树合�?
+### 动态开点与线段树合并
 
 ```cpp
 const int maxn=1e5+5;
@@ -156,7 +156,7 @@ public:
 };
 ```
 
-### 可持久化线段�?
+### 可持久化线段树
 
 ```cpp
 const int maxn=1e5+5;
