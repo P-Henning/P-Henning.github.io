@@ -27,7 +27,7 @@ e^{\frac{-\Delta f}T}&\Delta f\geqslant 0
 
 除此之外就是如何产生新解以及调参的问题。
 
-本题最大的问题是圆的位置不确定。不过用上模拟退火就显得简单粗暴了，将矩形的面积看成是关于圆的位置集合的一个函数$f(s)$，$s=\lbrace(x_i,y_i)\rbrace$，随机确定每个圆的位置，然后可以通过求此时矩形的最小面积作为函数值，再用模拟退火求函数$f(s)$的最小值。
+本题最大的问题是圆的位置不确定。不过用上模拟退火就显得简单粗暴了，将矩形的面积看成是关于圆的位置集合的一个函数$f(s),s=\lbrace(x_i,y_i)\rbrace$，随机确定每个圆的位置，然后可以通过求此时矩形的最小面积作为函数值，再用模拟退火求函数$f(s)$的最小值。
 
 在圆的位置确定的情况下求矩形的最小面积成了另一个问题。显然矩形的每条边一定和至少一个圆相切。如果知道了矩形两条邻边的倾斜角$\theta_1,\theta_2$，就可以用两条倾斜角分别为$\theta_1,\theta_2$的直线去和每一个圆相切，得到两组平行线，最外边的四条直线围成的图形即为所求矩形。而$\theta_1,\theta_2$中一定有一个角在$[0,90^{\circ})$范围内（设为$\theta$），而另一个角就是$\theta+90^{\circ}$。此时矩形的面积又可以看成是关于$\theta$的函数$g_s(\theta)$。
 
@@ -102,14 +102,14 @@ printf("%.2lf\n",ans);
 
 怎么办呢？慢慢退火就是了。
 
-<div align="center"><img src="https://s1.ax1x.com/2020/04/12/GLlJnU.jpg"></div>
+<div align="center"><img src="https://s1.ax1x.com/2020/04/12/GLqd3T.jpg"></div>
 
 最后来个猛一点的：
 
     25 17 34 38 6 11 40
     14 7 3 6 12 9 15
 
-程序算出的答案为$186541.93$。
+程序进行多次退火后算出的答案为$186541.93$。
 
 <div align="center"><img src="https://s1.ax1x.com/2020/04/12/GLoYrR.png"></div>
 
@@ -119,4 +119,4 @@ printf("%.2lf\n",ans);
 
 <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script>
 
-[^func]: 这里的$f'(S)$不表示$f(S)$的导数。
+[^func]: 这里的$f'(s)$不表示$f(s)$的导数。
