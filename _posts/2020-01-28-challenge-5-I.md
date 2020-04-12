@@ -28,13 +28,13 @@ tags: yuzan1830
 
 打出连续的perfect和great称为Combo，而往往单个note得分也有Combo数的加成，还与主乐队综合能力与曲目难度有关，具体值如下：
 
-![](https://s1.ax1x.com/2020/03/13/8mLMwQ.jpg "引自b站专栏，原作者@BuG_Dream")
+<div align="center"><img src="https://s1.ax1x.com/2020/03/13/8mLMwQ.jpg">引自b站专栏，原作者@BuG_Dream</div>
 
 可以看出，基础分数是与曲目有关的常数，而总得分是所有note数之和，即有
 
 $$S_k=\sum_{i=1}^kM_i$$
  
-其中$k$为总note数，$S_k$为总得分，$M_i$（$i\in[1,k], i\in N$）为第$i$个单个note得分。
+其中$k$为总note数，$S_k$为总得分，$M_i$（$i\in[1,k], i\in\mathbb N$）为第$i$个单个note得分。
 
 知道这些知识后，我们就可以开始出题了。
 
@@ -46,13 +46,13 @@ $$S_k=\sum_{i=1}^kM_i$$
 
 假设popipa基础得分为$a$，准度为$p$，一首曲子note总数为$k$，miss数为$x$，其中$p=\frac{N(perfect)}k$，$N(perfect)$为perfect数。请你帮有咲计算一下，popipa的极限高分和翻车低分分别是多少。
 
-以~~黑叫~~Black Shout为例[^sample]，
+以~~黑叫~~Black Shout为例：
 
 **样例输入**
 
     2000 0.93 506 3
 
-**样例输出**
+**样例输出**[^sample]
 
     1142976.000
     gr33-p470-m3
