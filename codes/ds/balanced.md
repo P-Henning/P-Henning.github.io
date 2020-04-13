@@ -494,7 +494,7 @@ private:
   }
 public:
   void build(point *a,int n){
-    for(int i=1;i<=seqtot;i++)seq[i]=a[i],seq[i].d=&d;
+    for(int i=1;i<=n;i++)seq[i]=a[i],seq[i].d=&d;
     build(root,1,seqtot=n,0);
   }
   void insert(point t){t.d=&d;insert(root,t,0);rebuild();}
