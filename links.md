@@ -6,15 +6,9 @@ titles:
   zh-Hant : 連結
 permalink: /links
 key: links
-aside:
-  toc: true
 ---
 
 ## 友链
-
-### leanote.com
-
-- **[PhantasmDragon](http://phantasmdragon.leanote.com/)**
 
 ### cnblogs.com
 
@@ -33,6 +27,15 @@ aside:
 - **[Huang_Yuhan](https://blog.csdn.net/qq_35718682)**
 - **[PHenning](https://blog.csdn.net/PHenning)**
 - **[yuzan1830](https://blog.csdn.net/Balllightnings)**
+
+### github.io
+
+- **[Chjinqi](https://chjinqi.github.io/)**
+- **[Sparrow](https://jackpoison.github.io/)**
+
+### leanote.com
+
+- **[PhantasmDragon](http://phantasmdragon.leanote.com/)**
 
 ### luogu.com.cn
 
@@ -61,6 +64,11 @@ aside:
 ### 杂项
 
 - **[CloudConvert](https://cloudconvert.com/)**：文件转换
-- **[Kunst der Fuge](http://kunstderfuge.com/)**：Midi下载
+- **[Kunst der Fuge](http://kunstderfuge.com/)**：古典Midi下载
 - **[PostJson](http://coolaf.com/)**：综合工具
 - **[在线工具](https://tool.oschina.net/)**：综合工具
+
+### 休闲
+
+- **[九歌](http://jiuge.thunlp.cn/)**：人工智能诗歌写作
+- **[我爱斗图](https://www.52doutu.cn/)**表情包制作
