@@ -30,10 +30,10 @@ header:
     url: /message
     
   - titles:
-      en      : About
-      zh-Hans : 关于
-      zh-Hant : 關於
-    url: /about
+      en      : Links
+      zh-Hans : 链接
+      zh-Hant : 連結
+    url: /links
 
 codes:
   - title:      数学
