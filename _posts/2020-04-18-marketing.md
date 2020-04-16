@@ -1,5 +1,5 @@
 ---
-title: English Report: About "Marketing Accounts"
+title: English Report - About "Marketing Accounts"
 author: P-Henning
 permalink: /marketing
 key: marketing
