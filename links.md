@@ -41,6 +41,7 @@ key: links
 
 - **[Huang_Yuhan](https://www.luogu.com.cn/blog/HuangYuhan-Yuzhe/)**
 - **[qurui](https://www.luogu.com.cn/blog/qr-deaf/)**
+- **[wangdy](https://tqltqltqlorzorzorz.blog.luogu.org/)**
 - **[zi_ye](https://www.luogu.com.cn/blog/ziye/)**
 
 ## 工具
@@ -70,5 +71,7 @@ key: links
 
 ### 休闲
 
+- **[Emojipedia](https://emojipedia.org/)**：表情查询
+- **[SimSimi](https://simsimi.com/)**：聊天机器人
 - **[九歌](http://jiuge.thunlp.cn/)**：人工智能诗歌写作
-- **[我爱斗图](https://www.52doutu.cn/)**表情包制作
+- **[我爱斗图](https://www.52doutu.cn/)**：表情包制作
