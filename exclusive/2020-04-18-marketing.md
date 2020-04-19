@@ -9,8 +9,10 @@ license: true
 aside:
   toc: true
 header: false
-footer: false
 ---
+
+Header on this page has been hidden.
+{:.warning}
 
 ## VIDEO TIME
 
