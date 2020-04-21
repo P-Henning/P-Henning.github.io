@@ -129,7 +129,7 @@ private:
     for(edge *e=now[u];e;e=e->next){
       int v=e->to;
       if(!dfn[v]){
-        st[++stktop]=e,cnt++;
+        st[++top]=e,cnt++;
         dfs(v,u);low[u]=min(low[u],low[v]);
         if(low[v]>=dfn[u]){
           int p,q;iscutp[u]=1;
