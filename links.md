@@ -8,6 +8,8 @@ permalink: /links
 key: links
 ---
 
+# 链接
+
 ## 友链
 
 ### cnblogs.com
@@ -66,7 +68,9 @@ key: links
 
 - **[CloudConvert](https://cloudconvert.com/)**：文件转换
 - **[Kunst der Fuge](http://kunstderfuge.com/)**：古典Midi下载
+- **[Office-Converter](https://cn.office-converter.com/)**：文件转换
 - **[PostJson](http://coolaf.com/)**：综合工具
+- **[墨灵音乐](https://music.qugeek.com/)**：综合音乐工具
 - **[在线工具](https://tool.oschina.net/)**：综合工具
 
 ### 休闲
