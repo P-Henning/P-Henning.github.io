@@ -3,7 +3,7 @@ title: 挑战四：Determined Umbrella (I)
 author: Ball-lightnings
 permalink: /challenge-4-I
 key: challenge-4-I
-tags: yuzan1830
+tags: 挑战
 ---
 
 ### 说在前面
@@ -53,10 +53,8 @@ tags: yuzan1830
     12 13 14
     20 21 22
 
-**样例输出**[^sample]
+**样例输出**
 
     41631.24
 
 完。
-
-[^sample]: 样例输出是达羌事后添加上去的。
