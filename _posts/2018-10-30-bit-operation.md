@@ -3,7 +3,7 @@ title: 位运算入门
 author: P-Henning
 permalink: /bit-operation
 key: bit-operation
-tags: 笔记
+tags: [笔记, OI]
 ---
 
 ## 整数的存储
@@ -138,13 +138,13 @@ $x\gg y$表示把$x$的每个二进制位向右移动$y$位，移动造成的最
 
 - 大写变小写，小写变大写：$c\oplus 32$
 - 全部变小写：$c\lor 32$
-- 全部变大写：$c\land\lnot 32=c\land-33$
+- 全部变大写：$c\land\lnot 32$
 
 字符与数字转换：
 
 - 字符变数字，数字变字符：$c\oplus 48$
 - 全部变字符：$c\lor 48$
-- 全部变数字：$c\land\lnot 48=c\land-49$
+- 全部变数字：$c\land\lnot 48$
 
 ### 集合操作
 
@@ -153,15 +153,15 @@ $x\gg y$表示把$x$的每个二进制位向右移动$y$位，移动造成的最
 - 判断$k$是否属于$s$：$s\land(1\ll(k-1))$
 - 枚举$s$的子集$t$
 
-```cpp
-for(int t=s;t;t=t-1&s);
-```
+  ```cpp
+  for(int t=s;t;t=t-1&s);
+  ```
 
 - 枚举$s$的元素$x$
 
-```cpp
-for(int i=s;i;i-=i&-i)int x=i&-i;
-```
+  ```cpp
+  for(int i=s;i;i-=i&-i)int x=i&-i;
+  ```
 
 ### 其它操作
 
@@ -169,7 +169,7 @@ for(int i=s;i;i-=i&-i)int x=i&-i;
 
   $$\begin{aligned}
   2^ix&=x\ll i\\
-  \left\lfloor\frac x{2^i}\right\rfloor&=x\gg i\\
+  \left\lfloor\dfrac x{2^i}\right\rfloor&=x\gg i\\
   x\bmod 2^i&=x\land((1\ll i)-1)
   \end{aligned}$$
   
@@ -180,10 +180,15 @@ for(int i=s;i;i-=i&-i)int x=i&-i;
 
 - 交换正整数
 
-```cpp
-void swap1(int &a,int &b){a=a^b,b=a^b,a=a^b;}
-void swap2(int &a,int &b){a=a+b,b=a-b,a=a-b;}
-```
+  ```cpp
+  void swapint(int &a,int &b){a=a^b,b=a^b,a=a^b;}
+  ```
+
+  类似地，有
+
+  ```cpp
+  void swapint(int &a,int &b){a=a+b,b=a-b,a=a-b;}
+  ```
 
 - 构造常数
   - `unsigned int`的上限：`~0u` `-1u` `0xffffffff`
