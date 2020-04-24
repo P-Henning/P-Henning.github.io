@@ -3,7 +3,7 @@ title: 挑战五：How to Get Highest Score in Garupa (I)
 author: Ball-lightnings
 permalink: /challenge-5-I
 key: challenge-5-I
-tags: yuzan1830
+tags: 挑战
 ---
 
 ### 说在前面
@@ -44,7 +44,7 @@ $$S_k=\sum_{i=1}^kM_i$$
 
 然而对邦前一天，香澄突然怂了，担心比不过R组~~她们会说相声~~和~~夕阳红~~AG。于是她恳求市谷有咲帮她计算一下最高得分。
 
-假设popipa基础得分为$a$，准度为$p$，一首曲子note总数为$k$，miss数为$x$，其中$p=\frac{N(perfect)}k$，$N(perfect)$为perfect数。请你帮有咲计算一下，popipa的极限高分和翻车低分分别是多少。
+假设popipa基础得分为$a$，准度为$p$，一首曲子note总数为$k$，miss数为$x$，其中$p=\dfrac{N(perfect)}k$，$N(perfect)$为perfect数。请你帮有咲计算一下，popipa的极限高分和翻车低分分别是多少。
 
 以~~黑叫~~Black Shout为例：
 
@@ -52,7 +52,7 @@ $$S_k=\sum_{i=1}^kM_i$$
 
     2000 0.93 506 3
 
-**样例输出**[^sample]
+**样例输出**
 
     1142976.000
     gr33-p470-m3
@@ -60,5 +60,3 @@ $$S_k=\sum_{i=1}^kM_i$$
     p144-m-p108-m-p112-gr4-m-p106-gr29
 
 ~~为什么你们破琵琶要唱R组的歌啊kora！~~
-
-[^sample]: 样例输出是达羌事后添加上去的。
