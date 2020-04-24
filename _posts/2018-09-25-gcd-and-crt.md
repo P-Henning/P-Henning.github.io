@@ -3,32 +3,32 @@ title: 欧几里得算法与中国剩余定理
 author: P-Henning
 permalink: /gcd-and-crt
 key: gcd-and-crt
-tags: [笔记, 数论]
+tags: [笔记, OI]
 ---
 
 ## 欧几里得算法
 
 ### 欧几里得算法
 
-计算两个整数$a,b$的最大公约数$\text{gcd($a,b$)}$。
+计算两个整数$a,b$的最大公约数$\gcd(a,b)$。
 
-$a\bmod b$可以表示成$a-\left\lfloor\frac ab\right\rfloor b$。设$d\vert a,d\vert b$，则$\frac ad,\frac bd\in \mathbb Z$，于是有
+$a\bmod b$可以表示成$a-\left\lfloor\dfrac ab\right\rfloor b$。设$d\vert a,d\vert b$，则$\dfrac ad,\dfrac bd\in \mathbb Z$，于是有
 
-$$a\bmod b=a-\left\lfloor\frac ab\right\rfloor b=\left(\frac ad-\left\lfloor\frac ab\right\rfloor\frac bd\right)d$$
+$$a\bmod b=a-\left\lfloor\dfrac ab\right\rfloor b=\left(\dfrac ad-\left\lfloor\dfrac ab\right\rfloor\dfrac bd\right)d$$
 
-因为$\frac ad-\left\lfloor\frac ab\right\rfloor\frac bd$是整数，所以$d\vert(a\bmod b)$，即$d$是$b$和$a\bmod b$的公约数。
+因为$\dfrac ad-\left\lfloor\dfrac ab\right\rfloor\dfrac bd$是整数，所以$d\vert(a\bmod b)$，即$d$是$b$和$a\bmod b$的公约数。
 
 <!--more-->
 
-又设$d'\vert b,d'\vert(a\bmod b)$，则$\frac b{d'},\frac{a\bmod b}{d'}\in \mathbb Z$。同理可得
+又设$d'\vert b,d'\vert(a\bmod b)$，则$\dfrac b{d'},\dfrac{a\bmod b}{d'}\in \mathbb Z$。同理可得
 
-$$a=\left\lfloor\frac ab\right\rfloor b+(a\bmod b)=\left(\left\lfloor\frac ab\right\rfloor\frac b{d'}+\frac{a\bmod b}{d'}\right)d'$$
+$$a=\left\lfloor\dfrac ab\right\rfloor b+(a\bmod b)=\left(\left\lfloor\dfrac ab\right\rfloor\dfrac b{d'}+\dfrac{a\bmod b}{d'}\right)d'$$
 
 即$d'\vert a$，即$d'$是$a$和$b$的公约数。于是$a,b$的公约数与$b,a\bmod b$的公约数相同，所以
 
-$$\text{gcd}(a,b)=\text{gcd}(b,a\bmod b)$$
+$$\gcd(a,b)=\gcd(b,a\bmod b)$$
 
-根据上式，$a,b$的值不断减小，于是可以递归求解，边界为$\text{gcd}(a,0)=a$。
+根据上式，$a,b$的值不断减小，于是可以递归求解，边界为$\gcd(a,0)=a$。
 
 ```cpp
 int gcd(int a,int b){
@@ -37,30 +37,30 @@ int gcd(int a,int b){
 ```
 
 ### 扩展欧几里得算法
-在已知整数$a,b$的情况下求$ax+by=\text{gcd}(a,b)$的一组整数解$a,b$。
+在已知整数$a,b$的情况下求$ax+by=\gcd(a,b)$的一组整数解$a,b$。
 
 设
 
 $$\begin{aligned}
-ax_1+by_1&=\text{gcd}(a,b)\\
-bx_2+(a\bmod b)y_2&=\text{gcd}(b,a\bmod b)
+ax_1+by_1&=\gcd(a,b)\\
+bx_2+(a\bmod b)y_2&=\gcd(b,a\bmod b)
 \end{aligned}$$
 
 由欧几里得算法得
 
 $$\begin{aligned}
 ax_1+by_1&=bx_2+(a\bmod b)y_2\\
-&=bx_2+\left(a-\left\lfloor\frac ab\right\rfloor b\right)y_2\\
-&=ay_2+b\left(x_2-\left\lfloor\frac ab\right\rfloor y_2\right)
+&=bx_2+\left(a-\left\lfloor\dfrac ab\right\rfloor b\right)y_2\\
+&=ay_2+b\left(x_2-\left\lfloor\dfrac ab\right\rfloor y_2\right)
 \end{aligned}$$
 
 观察上式可知
 
 $$\begin{cases}x_1=y_2\\
-y_1=x_2-\left\lfloor\frac ab\right\rfloor y_2
+y_1=x_2-\left\lfloor\dfrac ab\right\rfloor y_2
 \end{cases}$$
 
-按照欧几里得算法递归求解，$\text{gcd}(a,b)$中$b=0$时，$x=1,y=0$即为该方程的一组解，此时回溯即可求出$x,y$最初的解。
+按照欧几里得算法递归求解，$\gcd(a,b)$中$b=0$时，$x=1,y=0$即为该方程的一组解，此时回溯即可求出$x,y$最初的解。
 
 ```cpp
 int ext_gcd(int a,int b,int &x,int &y){
@@ -70,11 +70,11 @@ int ext_gcd(int a,int b,int &x,int &y){
 }
 ```
 
-对于不定方程$ax+by=c$，设$\text{gcd}(a,b)=d$，用扩展欧几里得算法求出的方程$ax+by=d$的解为$x',y'$。则当$c\bmod d=0$时，原方程有通解：
+对于不定方程$ax+by=c$，设$\gcd(a,b)=d$，用扩展欧几里得算法求出的方程$ax+by=d$的解为$x',y'$。则当$c\bmod d=0$时，原方程有通解：
 
 $$\begin{cases}
-x=\frac cdx'+\frac bdk\\
-y=\frac cdy'-\frac adk
+x=\dfrac cdx'+\dfrac bdk\\
+y=\dfrac cdy'-\dfrac adk
 \end{cases}$$
 
 ## 中国剩余定理
@@ -90,9 +90,17 @@ x\equiv b_2\pmod{w_2}\\
 x\equiv b_n\pmod{w_n}
 \end{cases}$$
 
-令$p=\prod\limits_{i=1}^nw_i$，$m_i=\frac p{w_i}$，$m_i{m_i}^{-1}\equiv 1\pmod{w_i}$，则上面方程组的解为
+令
 
-$$x=\sum_{i=1}^nm_i{m_i}^{-1}b_i\bmod p$$
+$$\begin{aligned}
+p&=\prod\limits_{i=1}^nw_i\\
+m_i&=\dfrac p{w_i}\\
+m_i{m_i}^{-1}&\equiv 1\pmod{w_i}
+\end{aligned}$$
+
+则上面方程组的解为
+
+$$x=\left(\sum_{i=1}^nm_i{m_i}^{-1}b_i\right)\bmod p$$
 
 将$x$代入任意一个方程即可得证，此处略。
 
