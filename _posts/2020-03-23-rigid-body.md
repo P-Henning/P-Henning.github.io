@@ -3,7 +3,7 @@ title: 刚体初步
 author: P-Henning
 permalink: /rigid-body
 key: rigid-body
-tags: 笔记
+tags: [笔记, 物理]
 ---
 
 ## 力矩平衡
@@ -73,11 +73,11 @@ $$f_2\cos\theta+f_3=N_2\sin\theta\tag 2$$
 
 设棒与地面交于点$B$，则$N_1,f_1,f_2$对$B$的力矩为$0$，于是$mg,N_2$对$B$的力矩为$0$，即
 
-$$N_2\cdot L=mg\cdot\frac L2\cdot\cos\theta\tag 3$$
+$$N_2\cdot L=mg\cdot\dfrac L2\cdot\cos\theta\tag 3$$
 
 由$(1)(2)(3)$得
 
-$$f_3=\frac{\frac 12\rho gL\sin\theta\cos\theta}{1+\cos\theta}$$
+$$f_3=\dfrac{\dfrac 12\rho gL\sin\theta\cos\theta}{1+\cos\theta}$$
 
 （3）分析一下结果的合理性。
 
@@ -107,19 +107,19 @@ $$L=m\omega r^2$$
 
 假设该点做圆周运动，即$r$不变，$v_{\text{法}}=0$。如果给该点施加一个法向的力$F_{\text{法}}$，改变不了切向速度，也就改变不了角动量。因此只需考虑切向的作用力$F_{\text{切}}$。此时由牛顿第二定律得
 
-$$a_{\text{切}}=\frac{\Delta v}{\Delta t}=\frac{F_{\text{切}}}m$$
+$$a_{\text{切}}=\dfrac{\Delta v}{\Delta t}=\dfrac{F_{\text{切}}}m$$
 
 于是
 
-$$\frac{\Delta L}{\Delta t}=mr\cdot\frac{\Delta v}{\Delta t}=mr\cdot\frac{F_{\text{切}}}m=F_{\text{切}}\cdot r$$
+$$\dfrac{\Delta L}{\Delta t}=mr\cdot\dfrac{\Delta v}{\Delta t}=mr\cdot\dfrac{F_{\text{切}}}m=F_{\text{切}}\cdot r$$
 
 因此一个切向的力给角动量贡献了一个力矩$F_{\text{切}}r$（这也说明力矩是角动量的变化，力矩为$0$时角动量守恒）。
 
 但法向的作用力可能导致圆周运动的半径$r$改变。此时贡献的力矩为
 
-$$\frac{\Delta L}{\Delta t}=m\cdot\frac{\Delta\left(v_{\text{切}}r\right)}{\Delta t}=mr\cdot\frac{\Delta v_{\text{切}}}{\Delta t}+mv_{\text{切}}\cdot\frac{\Delta r}{\Delta t}$$
+$$\dfrac{\Delta L}{\Delta t}=m\cdot\dfrac{\Delta\left(v_{\text{切}}r\right)}{\Delta t}=mr\cdot\dfrac{\Delta v_{\text{切}}}{\Delta t}+mv_{\text{切}}\cdot\dfrac{\Delta r}{\Delta t}$$
 
-此时$F_{\text{切}}$并不等于$m\cdot\frac{\Delta v_{\text{切}}}{\Delta t}$，原因是切向的力改变了法向的速度。
+此时$F_{\text{切}}$并不等于$m\cdot\dfrac{\Delta v_{\text{切}}}{\Delta t}$，原因是切向的力改变了法向的速度。
 
 对于一个刚体，如果以$O$点为轴、以角速度$\omega$转动，此时刚体的角动量为
 
@@ -133,11 +133,11 @@ $$L=\sum m_i\omega r_i^2=\left(\sum m_ir_i^2\right)\omega=I\omega$$
 
 在极坐标系中，有
 
-$$a_{\text{切}}=\frac{\Delta v_{\text{切}}}{\Delta t}+\frac{v_{\text{切}}v_{\text{法}}}r$$
+$$a_{\text{切}}=\dfrac{\Delta v_{\text{切}}}{\Delta t}+\dfrac{v_{\text{切}}v_{\text{法}}}r$$
 
 所以在非圆周运动中，$F_{\text{切}}=0$并不意味着$\Delta v_{\text{切}}=0$。
 
-**例：**水平的光滑桌面上开有一个小孔，一条绳穿过小孔，其两端各系有一质量为$m$的小球，开始时，用手握住下面的小球，桌上的小球以$v_0=\frac 32\sqrt{2gr_0}$的速率做半径为$r_0$的匀速圆周运动，然后放手，求桌上绳索的最大长度和最小长度。
+**例：**水平的光滑桌面上开有一个小孔，一条绳穿过小孔，其两端各系有一质量为$m$的小球，开始时，用手握住下面的小球，桌上的小球以$v_0=\dfrac 32\sqrt{2gr_0}$的速率做半径为$r_0$的匀速圆周运动，然后放手，求桌上绳索的最大长度和最小长度。
 
 放手时桌上小球运动的半径$r$会变大，此时小球有向外的速度$v_{\text{法}}$，因此虽然$F_{\text{切}}=0$，但$\Delta v_{\text{切}}\neq 0$。接下来的运动情形：
 
@@ -152,19 +152,19 @@ $$L=mv_{\text{切}}r$$
 
 桌上小球的速度$v_1=\sqrt{v_{\text{切}}^2+v_{\text{法}}^2}$。由于沿绳方向速度相等，所以桌下小球的速度$v_2=v_{\text{法}}$。以桌面为零势能面，设绳长为$l$，则整个系统的总能量为
 
-$$E=-mg(l-r)+\frac 12mv_{\text{法}}^2+\left(\frac 12mv_{\text{法}}^2+\frac 12mv_{\text{切}}^2\right)$$
+$$E=-mg(l-r)+\dfrac 12mv_{\text{法}}^2+\left(\dfrac 12mv_{\text{法}}^2+\dfrac 12mv_{\text{切}}^2\right)$$
 
 由于整个系统无外力做功，因此总能量守恒。
 
 通过之前的分析可知桌上绳索长度达到最值时$v_{\text{法}}=0$，此时
 
-$$E=mgr-mgl+\frac 12mv_{\text{切}}^2$$
+$$E=mgr-mgl+\dfrac 12mv_{\text{切}}^2$$
 
 最初桌上小球做匀速圆周运动时，速度为切线方向，此时
 
 $$\begin{aligned}
-E&=mgr_0-mgl+\frac 12m\cdot\frac 92gr_0\\
-L&=mr_0\cdot\frac 32\sqrt{2gr_0}
+E&=mgr_0-mgl+\dfrac 12m\cdot\dfrac 92gr_0\\
+L&=mr_0\cdot\dfrac 32\sqrt{2gr_0}
 \end{aligned}$$
 
 根据能量、角动量守恒，联立方程，解得
@@ -175,15 +175,15 @@ $$r_{\min}=r_0,r_{\max}=3r_0$$
 
 $$I=\sum m_ir_i^2$$
 
-对于一根质量为$m$、长度为$L$的杆，其端点$A$处的转动惯量为$I_A=\frac 13mL^2$，其中点$O$处的转动惯量为$I_O=\frac 1{12}mL^2$。
+对于一根质量为$m$、长度为$L$的杆，其端点$A$处的转动惯量为$I_A=\dfrac 13mL^2$，其中点$O$处的转动惯量为$I_O=\dfrac 1{12}mL^2$。
 
 对于一个质量为$m$、半径为$R$的圆环，其转动惯量为$I_O=mR^2$。
 
-对于一个质量为$m$、半径为$R$的圆盘/圆柱，其转动惯量为$I_O=\frac 12mR^2$。
+对于一个质量为$m$、半径为$R$的圆盘/圆柱，其转动惯量为$I_O=\dfrac 12mR^2$。
 
 柯尼希定理：
 
-$$E_{k\text{转}}=\frac 12I\omega^2=\frac 12mv_C^2+\frac 12I_C\omega^2$$
+$$E_{k\text{转}}=\dfrac 12I\omega^2=\dfrac 12mv_C^2+\dfrac 12I_C\omega^2$$
 
 如果质心$C$到转轴的距离为$d$，有$v_C=\omega d$，得到平行轴定理：
 
