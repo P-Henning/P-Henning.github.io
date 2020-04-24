@@ -3,7 +3,7 @@ title: 挑战四：Determined Umbrella (II)
 author: P-Henning
 permalink: /challenge-4-II
 key: challenge-4-II
-tags: [yuzan1830, 搜索]
+tags: 挑战
 ---
 
 ### 说在前面
