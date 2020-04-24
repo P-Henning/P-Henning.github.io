@@ -3,7 +3,7 @@ title: 挑战三：Picture Puzzle of Chino (II)
 author: P-Henning
 permalink: /challenge-3-II
 key: challenge-3-II
-tags: [yuzan1830, 搜索]
+tags: 挑战
 ---
 
 ### 说在前面
@@ -63,7 +63,7 @@ struct state{
 };
 ```
 
-然后是康托展开部分。这样就有$\text{encode($\lbrace 6,5,2,8,7,9,1,2,4\rbrace$)}=223051$，$\text{decode($223051$)}=\lbrace 6,5,2,8,7,9,1,2,4\rbrace$之类的映射关系了。
+然后是康托展开部分。这样就有$\text{encode}(\lbrace 6,5,2,8,7,9,1,2,4\rbrace)=223051$，$\text{decode}(223051)=\lbrace 6,5,2,8,7,9,1,2,4\rbrace$之类的映射关系了。
 
 ```cpp
 int fact[]={1,1,2,6,24,120,720,5040,40320,362880};
@@ -177,7 +177,7 @@ int main(){
     Step #2: 3 6
     Step #3: 5 9
 
-分析一下时间复杂度：对于边长为$n$的网格，一共有不超过$(n^2)!$种状态，每种状态可以选择$n^2$个位置，每个位置又可以选择另外$4$个位置的数来交换，而一次康托展开或逆康托展开的复杂度为$O(n^4)$，因此一次搜索的时间复杂度为$O((n^2)!\cdot 4n^6)$。看起来很可怕，但在实际情况下很多状态都是达不到的，因此这个上界特别松。
+分析一下时间复杂度：对于边长为$n$的网格，一共有不超过$\left(n^2\right)!$种状态，每种状态可以选择$n^2$个位置，每个位置又可以选择另外$4$个位置的数来交换，而一次康托展开或逆康托展开的复杂度为$O\left(n^4\right)$，因此一次搜索的时间复杂度为$O\left(\left(n^2\right)!\cdot 4n^6\right)$。看起来很可怕，但在实际情况下很多状态都是达不到的，因此这个上界特别松。
 
 ### 说在后面
 
@@ -223,7 +223,7 @@ int main(){
 
 A\*搜索最关键的部分是估价函数$h(x)$，它表示从当前状态$x$到目标状态所需步数的估计值。这个估计值应该小于实际所需步数，且要尽可能接近。下面是本蒟蒻针对yuzan1830的这个问题设计的估价函数（设目标状态为$y$，$x_{i_1j_1}=y_{i_2j_2}=k$），也许是个假的估价函数。
 
-$$h(x)=\left\lfloor\frac 13\sum_{k=1}^9\vert i_1-i_2\vert+\vert j_1-j_2\vert\right\rfloor$$
+$$h(x)=\left\lfloor\dfrac 13\sum_{k=1}^9\vert i_1-i_2\vert+\vert j_1-j_2\vert\right\rfloor$$
 
 ```cpp
 int h(state st){
