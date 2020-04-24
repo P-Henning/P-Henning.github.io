@@ -3,7 +3,7 @@ title: 挑战三：Picture Puzzle of Chino (I)
 author: Ball-lightnings
 permalink: /challenge-3-I
 key: challenge-3-I
-tags: yuzan1830
+tags: 挑战
 ---
 
 ### 说在前面
