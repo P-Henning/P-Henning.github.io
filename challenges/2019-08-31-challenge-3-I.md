@@ -1,4 +1,5 @@
 ---
+layout: article
 title: 挑战三：Picture Puzzle of Chino (I)
 author: Ball-lightnings
 date: 2019-08-31
