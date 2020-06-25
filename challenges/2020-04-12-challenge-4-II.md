@@ -1,4 +1,5 @@
 ---
+layout: article
 title: 挑战四：Determined Umbrella (II)
 author: P-Henning
 date: 2020-04-12
