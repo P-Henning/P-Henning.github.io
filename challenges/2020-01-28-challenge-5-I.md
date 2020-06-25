@@ -1,4 +1,5 @@
 ---
+layout: article
 title: 挑战五：How to Get Highest Score in Garupa (I)
 author: Ball-lightnings
 date: 2020-01-28
