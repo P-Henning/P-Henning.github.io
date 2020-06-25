@@ -1,4 +1,5 @@
 ---
+layout: article
 title: 挑战四：Determined Umbrella (I)
 author: Ball-lightnings
 date: 2020-04-11
