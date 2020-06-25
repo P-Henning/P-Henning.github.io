@@ -1,4 +1,5 @@
 ---
+layout: article
 title: 挑战三：Picture Puzzle of Chino (II)
 author: P-Henning
 date: 2019-08-31
