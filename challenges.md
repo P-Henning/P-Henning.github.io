@@ -8,7 +8,10 @@ permalink: /challenges
 key: challenges
 ---
 
-<div>{%- include extensions/netease-cloud-music.html id='33262311' -%}</div>
+<div>{%- include extensions/netease-cloud-music.html id='1469215612' -%}</div>
+
+若在阅读文章时要保留音乐，可在新标签页中打开文章。
+{:.info}
 
 公元2019年4月26日，yuzan1830让本蒟蒻展示自己的渣渣代码能力（详见**挑战一**）。事后觉之有味，于是缀博文以记之，名曰《来自yuzan1830的挑战》，并煞有介事地在后面添了一个“一”。不料两个月后，yuzan1830带来了新的问题，本蒟蒻有了机会写接下来的“二”。从此yuzan1830开始独立设计题目，这项挑战也成为传统，延续至今 ~~（准确地说是公元2020年4月11日）~~。
 
