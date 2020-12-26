@@ -4,9 +4,12 @@ titles:
   en      : Links
   zh-Hans : 链接
   zh-Hant : 連結
+show_title: false
 permalink: /links
 key: links
 ---
+
+# 链接
 
 ## 友链
 
@@ -65,10 +68,11 @@ key: links
 ### 杂项
 
 - **[CloudConvert](https://cloudconvert.com/)**：文件转换
+- **[FreeMusic](http://y.webzcz.cn/)**：音乐下载
+- **[Hotbox](https://www.hotbox.fun/)**：视频下载
 - **[Kunst der Fuge](http://kunstderfuge.com/)**：古典Midi下载
 - **[Office-Converter](https://cn.office-converter.com/)**：文件转换
 - **[PostJson](http://coolaf.com/)**：综合工具
-- **[FreeMusic](http://y.webzcz.cn/)**：免费音乐下载
 - **[在线工具](https://tool.oschina.net/)**：综合工具
 
 ### 休闲
