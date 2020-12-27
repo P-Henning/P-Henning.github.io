@@ -8,7 +8,7 @@ permalink: /challenges
 key: challenges
 ---
 
-<div>{%- include extensions/netease-cloud-music.html id='1469215612' -%}</div>
+<div>{%- include extensions/netease-cloud-music.html id='472964765' -%}</div>
 
 若在阅读文章时要保留音乐，可在新标签页中打开文章。
 {:.info}
