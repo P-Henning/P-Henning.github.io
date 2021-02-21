@@ -47,12 +47,14 @@ $\lbrace a_n\rbrace$的初始值需要分情况讨论：
 
 ## 来
 
-已知集合$M=\lbrace1,2,\dots,q\rbrace$，矩阵$A_0=\begin{bmatrix}
+已知集合$M=\lbrace1,2,\dots,q\rbrace$，下面的矩阵$A_0$满足$a_{ij}\in M,1\leqslant i\leqslant m,1\leqslant j\leqslant n$。
+
+$$A_0=\begin{bmatrix}
 a_{11}&a_{12}&\cdots&a_{1n}\\
 a_{21}&a_{22}&\cdots&a_{2n}\\
 \vdots&\vdots&\ddots&\vdots\\
 a_{m1}&a_{m2}&\cdots&a_{mn}
-\end{bmatrix}$满足$a_{ij}\in M,1\leqslant i\leqslant m,1\leqslant j\leqslant n$。
+\end{bmatrix}$$
 
 记$\sigma(A)$为矩阵$A$的各项和。
 
@@ -92,7 +94,14 @@ $$\begin{aligned}
 
 已知集合$M=\lbrace 1,2,\dots,n\rbrace$。
 
-$k$维空间中有$n$个点$P_1,P_2,\dots,P_n$，第$i$个点（$1\leqslant i\leqslant n$）的坐标为$P_i(x_{i1},x_{i2},\dots,x_{ik})$。这$n$个点的坐标满足$x_{ij}\in M,1\leqslant i\leqslant n,1\leqslant j\leqslant k$，且对任意的$j$，$x_{1j},x_{2j},\dots,x_{nj}$的值互不相同。
+$k$维空间中有如下$n$个点$P_1,P_2,\dots,P_n$，满足$x_{ij}\in M,1\leqslant i\leqslant n,1\leqslant j\leqslant k$，且对任意的$j$，$x_{1j},x_{2j},\dots,x_{nj}$的值互不相同。
+
+$$\begin{aligned}
+P_1(x_{11},x_{12},\dots,x_{1k})\\
+P_2(x_{21},x_{22},\dots,x_{2k})\\
+\vdots\\
+P_n(x_{n1},x_{n2},\dots,x_{nk})
+\end{aligned}$$
 
 $m$元组$(a_1,a_2,\dots,a_m)$满足$a_{\beta}\in M,1\leqslant\beta\leqslant m\leqslant n$，且对任意的$j$（$1\leqslant j\leqslant k$），关于$\beta$的函数$f_j(\beta)=x_{a_{\beta}j}$都单调递增。
 
