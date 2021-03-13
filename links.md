@@ -55,6 +55,7 @@ key: links
 - **[GeoGegra](https://www.geogebra.org/)**：图形计算器
 - **[Graph Editor](https://csacademy.com/app/graph_editor/)**：图论工具
 - **[OEIS](http://oeis.org/)**：整数数列查询
+- **[WolframAlpha](https://www.wolframalpha.com/)**：知识计算引擎
 - **[数字帝国](https://zh.numberempire.com/)**：综合数学工具
 
 ### OI
@@ -73,6 +74,7 @@ key: links
 - **[Kunst der Fuge](http://kunstderfuge.com/)**：古典Midi下载
 - **[Office-Converter](https://cn.office-converter.com/)**：文件转换
 - **[PostJson](http://coolaf.com/)**：综合工具
+- **[蚂蚁加速器](https://web.lanshuapi.com/aff/8Z58)**：高速稳定VPN
 - **[在线工具](https://tool.oschina.net/)**：综合工具
 
 ### 休闲
